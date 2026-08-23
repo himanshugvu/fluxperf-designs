@@ -43,12 +43,13 @@ h1 em{font-style:normal;background:linear-gradient(90deg,#22d3ee,#a78bfa,#f472b6
 .nstat b{color:var(--tx)}
 </style></head><body>
 <header class="hero">
-<h1>FluxPerf · <em>100 UI Design Concepts</em></h1>
-<p class="sub">Twenty visual themes covering ten screens for an enterprise API performance-testing platform on k6 OSS — scenarios & CSV data mapping, load profiles, K8s/Linux execution, SSE live monitoring, LoadRunner-style results analysis & SLA reporting, A/B run comparison, transaction flow composer, runner fleet management, and RBAC with full audit trail. Every file is fully self-contained.</p>
+<h1>FluxPerf · <em>105 UI Design Concepts</em></h1>
+<p class="sub">Twenty visual themes covering ten screens for an enterprise API performance-testing platform on k6 OSS — scenarios & CSV data mapping, load profiles, K8s/Linux execution, SSE live monitoring, LoadRunner-style results analysis & SLA reporting, A/B run comparison, transaction flow composer, runner fleet management, and RBAC with full audit trail — plus a five-variant Crimson Ink family. Every file is fully self-contained.</p>
 <div class="navstats">
 <span class="nstat"><b>65</b> left-menu designs (45 sidebar + 20 icon rail)</span>
 <span class="nstat"><b>35</b> top-menu designs</span>
-<span class="nstat"><b>50</b> dark · <b>50</b> light</span>
+<span class="nstat"><b>62</b> dark · <b>43</b> light</span>
+<span class="nstat"><b>+5</b> Crimson Ink family (101–105)</span>
 </div>
 <h2 class="genhead">Editor's Top 5 <span class="gentag">one click to the flagship screen</span></h2>
 <div class="picks">
@@ -75,11 +76,12 @@ h1 em{font-style:normal;background:linear-gradient(90deg,#22d3ee,#a78bfa,#f472b6
 </a>
 </div>
 <div class="filters" style="margin-top:40px">
-<button class="fc on" data-f="all">All 100</button>
+<button class="fc on" data-f="all">All 105</button>
 <button class="fc" data-f="dark">Dark themes</button>
 <button class="fc" data-f="light">Light themes</button>
 <button class="fc" data-f="suite-core">Core suite (01–50)</button>
 <button class="fc" data-f="suite-pro">Pro suite (51–100)</button>
+<button class="fc" data-f="suite-ink">Crimson Ink (101–105)</button>
 <button class="fc" data-f="nav-left">Left menu</button>
 <button class="fc" data-f="nav-top">Top menu</button>
 </div>
@@ -524,6 +526,29 @@ h1 em{font-style:normal;background:linear-gradient(90deg,#22d3ee,#a78bfa,#f472b6
 <div class="dnum">DESIGN 100</div>
 <div class="dname">Admin · Audit</div>
 <div class="ddesc">RBAC matrix, secrets vault, immutable audit trail.</div>
+<div class="open">Open design →</div></a></div></section><h2 class="genhead">Crimson Ink Family · designs 101–105 <span class="gentag">five style directions on one theme</span></h2>
+<section class="tsec" data-suite="ink">
+<div class="thead"><h2>101–105 · Crimson Ink ×5</h2><span class="mode">3 light · 2 dark</span><span class="tag">Editorial red/ink identity explored five ways — each variant shown on its most representative screen</span></div>
+<div class="tgrid"><a class="dcard" href="101-ink-classic-results-analysis.html">
+<div class="dnum">DESIGN 101 · LIGHT</div>
+<div class="dname">Ink Classic</div>
+<div class="ddesc">Refined editorial baseline — paper white, serif heads, crimson rules. Shown on Results Analysis.</div>
+<div class="open">Open design →</div></a><a class="dcard" href="102-ink-noir-live-run.html">
+<div class="dnum">DESIGN 102 · DARK</div>
+<div class="dname">Ink Noir</div>
+<div class="ddesc">The dark twin — charcoal surfaces, blood-red accents. Shown on Live Run Monitor.</div>
+<div class="open">Open design →</div></a><a class="dcard" href="103-ink-ledger-admin-audit.html">
+<div class="dnum">DESIGN 103 · LIGHT</div>
+<div class="dname">Ink Ledger</div>
+<div class="ddesc">Accountant-grade density — hairline tables, mono micro-labels. Shown on Admin · Audit.</div>
+<div class="open">Open design →</div></a><a class="dcard" href="104-ink-gallery-flow-composer.html">
+<div class="dnum">DESIGN 104 · LIGHT</div>
+<div class="dname">Ink Gallery</div>
+<div class="ddesc">Magazine spread — oversized italic serif, whitespace-first. Shown on Flow Composer.</div>
+<div class="open">Open design →</div></a><a class="dcard" href="105-ink-blueprint-runner-fleet.html">
+<div class="dnum">DESIGN 105 · DARK</div>
+<div class="dname">Ink Blueprint</div>
+<div class="ddesc">Drafting-table graphite, grid-paper backdrop, red markup. Shown on Runner Fleet.</div>
 <div class="open">Open design →</div></a></div></section>
 <div class="note"><b>How to choose:</b> Core suite covers the MVP workflow (define → run → monitor → history). Pro Suite adds the deep-dive tooling that paid platforms charge for — percentile analysis, SLA gates, baseline comparison, fleet ops, and compliance-grade auditing. Shortlist by comparing the same screen across themes here, then I'll rebuild the winner as a React + TypeScript component library with design tokens extracted automatically.</div>
 <script>
@@ -531,7 +556,7 @@ document.querySelectorAll('.fc').forEach(function(b){b.addEventListener('click',
 document.querySelectorAll('.fc').forEach(function(x){x.classList.remove('on')});b.classList.add('on');
 var f=b.dataset.f;
 document.querySelectorAll('.tsec').forEach(function(s){
-var show=f==='all'||s.dataset.mode===f||(f==='suite-core'&&s.dataset.suite==='core')||(f==='suite-pro'&&s.dataset.suite==='pro')||(f==='nav-left'&&(s.dataset.nav==='sidebar'||s.dataset.nav==='rail'))||(f==='nav-top'&&s.dataset.nav==='top');
+var show=f==='all'||s.dataset.mode===f||(f==='suite-core'&&s.dataset.suite==='core')||(f==='suite-pro'&&s.dataset.suite==='pro')||(f==='suite-ink'&&s.dataset.suite==='ink')||(f==='nav-left'&&(s.dataset.nav==='sidebar'||s.dataset.nav==='rail'))||(f==='nav-top'&&s.dataset.nav==='top');
 s.style.display=show?'':'none';});});});
 </script>
 </body></html>

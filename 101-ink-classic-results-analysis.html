@@ -3,14 +3,14 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Terminal Green · Live Run Monitor — FluxPerf</title>
+<title>Ink Classic · Results Analysis — FluxPerf</title>
 <style>
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
 :root{
---bg:#050805;--surface:#0a120a;--surface2:#060c06;--border:#173317;--input:#081108;
---text:#b8f5c4;--muted:#5f8f68;--accent:#22c55e;--accent2:#86efac;
---ok:#4ade80;--warn:#eab308;--danger:#ef4444;--r:2px;
---font:'JetBrains Mono', Consolas, monospace;--hfont:'JetBrains Mono', Consolas, monospace;
+--bg:#faf8f4;--surface:#ffffff;--surface2:#f3efe6;--border:#e2dcc9;--input:#ffffff;
+--text:#201b14;--muted:#7a6f5d;--accent:#b91c1c;--accent2:#1e3a8a;
+--ok:#15803d;--warn:#b45309;--danger:#b91c1c;--r:3px;
+--font:'Segoe UI', system-ui, sans-serif;--hfont:Georgia, serif;
 --shadow:0 10px 30px rgba(0,0,0,.10);
 }
 html{font-size:15px}
@@ -51,7 +51,7 @@ a{color:var(--accent);text-decoration:none}a:hover{text-decoration:underline}
 
 .main{padding:26px 30px 46px;max-width:1460px;width:100%;margin:0 auto;min-width:0}
 .topbar{display:flex;align-items:center;gap:14px;margin-bottom:24px;flex-wrap:wrap}
-.ptitle{font-family:var(--hfont);font-size:1.5rem;font-weight:700;letter-spacing:.06em;text-transform:uppercase}
+.ptitle{font-family:var(--hfont);font-size:1.5rem;font-weight:700;letter-spacing:-.01em}
 .psub{color:var(--muted);font-size:.88rem;margin-top:2px}
 .spacer{flex:1}
 
@@ -75,7 +75,7 @@ a{color:var(--accent);text-decoration:none}a:hover{text-decoration:underline}
 .c-glass{backdrop-filter:blur(16px);box-shadow:inset 0 1px 0 rgba(255,255,255,.12),0 16px 44px rgba(10,6,40,.35)}
 .c-hard{box-shadow:5px 5px 0 #101010;border-width:2px}
 .c-soft{box-shadow:var(--shadow);border-color:transparent}
-.card h3{font-family:var(--hfont);font-size:1rem;font-weight:700;margin-bottom:14px;letter-spacing:.05em;text-transform:uppercase;display:flex;align-items:center;gap:8px}
+.card h3{font-family:var(--hfont);font-size:1rem;font-weight:700;margin-bottom:14px;letter-spacing:0;display:flex;align-items:center;gap:8px}
 .card h3 .ic{color:var(--accent)}
 
 .grid{display:grid;gap:18px}
@@ -181,127 +181,117 @@ input[type=range]{width:100%;accent-color:var(--accent)}
 
 @media (max-width:1100px){.g-main{grid-template-columns:1fr}.app.nav-sidebar{grid-template-columns:200px 1fr}}
 @media (max-width:760px){.app.nav-sidebar,.app.nav-rail{grid-template-columns:1fr}.sidebar,.rail{display:none}.main{padding:18px 14px 40px}}
-.ptitle::before{content:"# ";color:var(--accent)}.brand .mark{border-radius:0}.chip{border-radius:0}.btn{border-radius:0}</style>
+.card h3{border-bottom:2px solid var(--text);padding-bottom:8px}
+</style>
 </head>
 <body>
-<div class="app nav-sidebar"><aside class="sidebar">
-<div class="brand"><span class="mark">FX</span><span>FluxPerf</span></div>
-<div class="nav-label">Platform</div><a class="nitem " href="31-terminal-green-dashboard.html" title="Dashboard"><svg class="ic " viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="7" height="9" rx="1.5"/><rect x="14" y="3" width="7" height="5" rx="1.5"/><rect x="14" y="12" width="7" height="9" rx="1.5"/><rect x="3" y="16" width="7" height="5" rx="1.5"/></svg><span class="nl">Dashboard</span></a><a class="nitem " href="33-terminal-green-scenario-builder.html" title="Scenarios"><svg class="ic " viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9.5 3h5"/><path d="M10 3v5.2L4.8 17a2.4 2.4 0 0 0 2.1 3.6h10.2A2.4 2.4 0 0 0 19.2 17L14 8.2V3"/><path d="M7.5 14h9"/></svg><span class="nl">Scenarios</span></a><a class="nitem " href="35-terminal-green-load-profiles.html" title="Load Profiles"><svg class="ic " viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M13 2 4.5 13.5H11l-1 8.5 8.5-11.5H12l1-8.5Z"/></svg><span class="nl">Load Profiles</span></a><a class="nitem active" href="32-terminal-green-live-run.html" title="Live Runs"><svg class="ic " viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 12h4l3-8 4 16 3-8h6"/></svg><span class="nl">Live Runs</span></a><a class="nitem " href="34-terminal-green-run-history.html" title="History"><svg class="ic " viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3.5 2"/></svg><span class="nl">History</span></a>
-<div class="nav-label">Manage</div><span class="nitem" style="pointer-events:none"><svg class="ic " viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><ellipse cx="12" cy="5.5" rx="7.5" ry="3"/><path d="M4.5 5.5v13c0 1.7 3.4 3 7.5 3s7.5-1.3 7.5-3v-13"/><path d="M4.5 12c0 1.7 3.4 3 7.5 3s7.5-1.3 7.5-3"/></svg><span class="nl">Data Files</span></span><span class="nitem" style="pointer-events:none"><svg class="ic " viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M13.5 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8.5L13.5 3Z"/><path d="M13.5 3v5.5H19"/></svg><span class="nl">Reports</span></span><span class="nitem" style="pointer-events:none"><svg class="ic " viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4.5" y="10" width="15" height="10.5" rx="2"/><path d="M8 10V7a4 4 0 0 1 8 0v3"/></svg><span class="nl">Secrets</span></span><span class="nitem" style="pointer-events:none"><svg class="ic " viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="9" cy="8" r="3.4"/><path d="M2.8 20a6.2 6.2 0 0 1 12.4 0"/><circle cx="17" cy="9" r="2.6"/><path d="M15.6 14.6a5.4 5.4 0 0 1 5.6 5.4"/></svg><span class="nl">Admin & Audit</span></span>
-<div class="side-foot"><span class="avatar">AR</span><div><div style="font-size:.86rem;font-weight:650">A. Rivera</div><div class="dim" style="font-size:.74rem">Performance Engineer</div></div></div>
-</aside><div>
+<div class="app nav-top">
+<header class="header">
+<div class="brand" style="padding:0"><span class="mark">FX</span><span>FluxPerf</span></div>
+<nav class="hnav"><a class="nitem active" href="101-ink-classic-results-analysis.html" title="Classic"><svg class="ic " viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 20v-7"/><path d="M11 20V6"/><path d="M17 20v-11"/><path d="M2 20h20"/></svg><span class="nl">Classic</span></a><a class="nitem " href="#" title="Noir"><svg class="ic " viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 12h4l3-8 4 16 3-8h6"/></svg><span class="nl">Noir</span></a><a class="nitem " href="#" title="Ledger"><svg class="ic " viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 2 4.5 5v6c0 5 3.2 8.4 7.5 11 4.3-2.6 7.5-6 7.5-11V5L12 2Z"/><path d="m9 11.5 2.2 2.2L15.5 9"/></svg><span class="nl">Ledger</span></a><a class="nitem " href="#" title="Gallery"><svg class="ic " viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m12 2 9 5-9 5-9-5 9-5Z"/><path d="m3 12 9 5 9-5"/><path d="m3 17 9 5 9-5"/></svg><span class="nl">Gallery</span></a><a class="nitem " href="#" title="Blueprint"><svg class="ic " viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="8" height="8" rx="1.5"/><rect x="13" y="3" width="8" height="8" rx="1.5"/><rect x="3" y="13" width="8" height="8" rx="1.5"/><rect x="13" y="13" width="8" height="8" rx="1.5"/></svg><span class="nl">Blueprint</span></a></nav>
+<div class="spacer"></div>
+<span class="nitem" style="pointer-events:none"><svg class="ic " viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><ellipse cx="12" cy="5.5" rx="7.5" ry="3"/><path d="M4.5 5.5v13c0 1.7 3.4 3 7.5 3s7.5-1.3 7.5-3v-13"/><path d="M4.5 12c0 1.7 3.4 3 7.5 3s7.5-1.3 7.5-3"/></svg><span class="nl">Data Files</span></span><span class="nitem" style="pointer-events:none"><svg class="ic " viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M13.5 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8.5L13.5 3Z"/><path d="M13.5 3v5.5H19"/></svg><span class="nl">Reports</span></span><span class="nitem" style="pointer-events:none"><svg class="ic " viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4.5" y="10" width="15" height="10.5" rx="2"/><path d="M8 10V7a4 4 0 0 1 8 0v3"/></svg><span class="nl">Secrets</span></span><span class="nitem" style="pointer-events:none"><svg class="ic " viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="9" cy="8" r="3.4"/><path d="M2.8 20a6.2 6.2 0 0 1 12.4 0"/><circle cx="17" cy="9" r="2.6"/><path d="M15.6 14.6a5.4 5.4 0 0 1 5.6 5.4"/></svg><span class="nl">Admin & Audit</span></span>
+<span class="avatar">AR</span>
+</header><div>
 <main class="main">
 
 <div class="topbar">
-<div><div class="ptitle">Live Run Monitor</div><div class="psub">Terminal Green concept · FluxPerf Performance Platform</div></div>
+<div><div class="ptitle">Results Analysis</div><div class="psub">Ink Classic · Crimson Ink Family variant 1 of 5 · FluxPerf</div></div>
 <div class="spacer"></div>
 <label class="search"><svg class="ic " viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg><input placeholder="Search scenarios, runs…"></label>
 <select class="envsel"><option>k8s-prod</option><option>k8s-staging</option><option>linux-runner-02</option></select>
 <button class="btn btn-primary "><svg class="ic " viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 4.8v14.4c0 .8.9 1.3 1.6.9l11-7.2c.6-.4.6-1.4 0-1.8l-11-7.2c-.7-.4-1.6.1-1.6.9Z"/></svg> New Run</button>
 </div>
 
-<section class="card c-border" style="display:flex;align-items:center;gap:16px;flex-wrap:wrap">
-<span class="livebadge"><i></i>LIVE</span>
-<div><div style="font-family:var(--hfont);font-weight:700;font-size:1.12rem">checkout-api <span class="badge">v3</span> · profile <span class="mono">steady-500</span></div>
-<div class="dim" style="font-size:.84rem">Run <span class="mono">RUN-1042</span> · target <span class="mono">k8s-prod</span> · engine k6 v0.50.0 · started 14:02:11 UTC · SSE stream connected</div></div>
+<section class="card c-border" style="display:flex;align-items:center;gap:14px;flex-wrap:wrap;margin-bottom:18px">
+<span class="chip ok">COMPLETED</span>
+<div><div style="font-family:var(--hfont);font-weight:700;font-size:1.08rem">RUN-1041 · payments-auth v7 · profile spike-2k</div>
+<div class="dim" style="font-size:.84rem">k8s-prod · k6 v0.50.0 · Aug 22, 11:47 – 12:32 UTC · 45m 03s · baseline ★</div></div>
 <div class="spacer"></div>
-<button class="btn btn-ghost btn-sm "><svg class="ic " viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="6" y="6" width="12" height="12" rx="2"/></svg> Stop run</button>
-<button class="btn btn-ghost btn-sm "><svg class="ic " viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v12"/><path d="m6.5 10.5 5.5 5 5.5-5"/><path d="M4 20h16"/></svg> Snapshot</button>
+<button class="btn btn-ghost btn-sm "><svg class="ic " viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v12"/><path d="m6.5 10.5 5.5 5 5.5-5"/><path d="M4 20h16"/></svg> PDF report</button>
+<button class="btn btn-ghost btn-sm "><svg class="ic " viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v12"/><path d="m6.5 10.5 5.5 5 5.5-5"/><path d="M4 20h16"/></svg> CSV raw</button>
+<a class="btn btn-primary btn-sm " href="#"><svg class="ic " viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="7.5" height="16" rx="1.5"/><rect x="13.5" y="4" width="7.5" height="16" rx="1.5"/><path d="M10.5 10h3"/></svg> Compare vs RUN-1037</a>
 </section>
 
-<section class="grid g-stats" style="margin-top:18px" id="tiles">
+<section class="grid g-stats">
 <div class="card stat c-border">
-<div class="lbl"><span>Active VUs</span><svg class="ic big" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="9" cy="8" r="3.4"/><path d="M2.8 20a6.2 6.2 0 0 1 12.4 0"/><circle cx="17" cy="9" r="2.6"/><path d="M15.6 14.6a5.4 5.4 0 0 1 5.6 5.4"/></svg></div>
-<div class="val"><span id="m-vu">250</span> <span class="dim" style="font-size:1rem">/ 500</span></div>
-<div class="delta flat">stage: steady</div>
-</div>
-<div class="card stat c-border">
-<div class="lbl"><span>Requests / sec</span><svg class="ic big" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 12h4l3-8 4 16 3-8h6"/></svg></div>
-<div class="val"><span id="m-rps">1,248</span></div>
-<div class="delta up">target ~1,250</div>
+<div class="lbl"><span>Total Requests</span><svg class="ic big" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 12h4l3-8 4 16 3-8h6"/></svg></div>
+<div class="val">18.4M</div>
+<div class="delta up">408 req/s avg</div>
 </div>
 <div class="card stat c-border">
 <div class="lbl"><span>p95 Latency</span><svg class="ic big" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3.5 2"/></svg></div>
-<div class="val"><span id="m-p95">182</span> ms</div>
-<div class="delta up">budget 400 ms</div>
+<div class="val">182 ms</div>
+<div class="delta up">SLA ≤ 400 ms</div>
 </div>
 <div class="card stat c-border">
 <div class="lbl"><span>Error Rate</span><svg class="ic big" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M13 2 4.5 13.5H11l-1 8.5 8.5-11.5H12l1-8.5Z"/></svg></div>
-<div class="val"><span id="m-err">0.42</span>%</div>
-<div class="delta down">budget 1.0%</div>
+<div class="val">0.11%</div>
+<div class="delta up">SLA ≤ 1%</div>
 </div>
-</section>
-
-<section class="card c-border" style="margin-top:18px">
-<h3><svg class="ic " viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M13 2 4.5 13.5H11l-1 8.5 8.5-11.5H12l1-8.5Z"/></svg> Load Profile Progress — steady-500</h3>
-<div class="stages">
-<div class="stage stg-ramp"><span>RAMP-UP</span><small>0 → 500 VUs · 5m ✓</small></div>
-<div class="stage stg-hold pulse"><span>STEADY</span><small>500 VUs · 30m · 18m elapsed</small></div>
-<div class="stage stg-down" style="opacity:.45"><span>RAMP-DOWN</span><small>→ 0 · 2m</small></div>
+<div class="card stat c-border">
+<div class="lbl"><span>SLA Verdict</span><svg class="ic big" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 2 4.5 5v6c0 5 3.2 8.4 7.5 11 4.3-2.6 7.5-6 7.5-11V5L12 2Z"/><path d="m9 11.5 2.2 2.2L15.5 9"/></svg></div>
+<div class="val"><span style="color:var(--ok)">PASS</span></div>
+<div class="delta up">4 of 4 goals met</div>
 </div>
-<div class="prog" style="margin-top:10px"><i id="m-prog" style="width:62%"></i></div>
-<div class="dim" style="font-size:.78rem;margin-top:6px">Overall progress 62% · ETA 11m 24s</div>
 </section>
 
 <section class="grid g-main" style="margin-top:18px">
-<div class="card c-border">
-<h3><svg class="ic " viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 12h4l3-8 4 16 3-8h6"/></svg> Live Metrics <span class="chip live live" style="margin-left:6px">streaming via SSE</span></h3>
-<div id="chart-host"><div class="chart-wrap"><svg class="chart" viewBox="0 0 620 210" preserveAspectRatio="none">
-<defs><linearGradient id="g2" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="var(--accent)" stop-opacity=".34"/><stop offset="100%" stop-color="var(--accent)" stop-opacity="0"/></linearGradient></defs>
-<line x1="0" x2="620" y1="53" y2="53" stroke="var(--border)" stroke-dasharray="3 5" stroke-width="1"/><line x1="0" x2="620" y1="105" y2="105" stroke="var(--border)" stroke-dasharray="3 5" stroke-width="1"/><line x1="0" x2="620" y1="158" y2="158" stroke="var(--border)" stroke-dasharray="3 5" stroke-width="1"/>
-<path d="M0,210 L0.0,60.3 L15.9,53.7 L31.8,48.8 L47.7,43.8 L63.6,47.6 L79.5,46.9 L95.4,47.5 L111.3,45.4 L127.2,50.4 L143.1,61.8 L159.0,64.4 L174.9,67.9 L190.8,71.6 L206.7,78.4 L222.6,79.4 L238.5,74.5 L254.4,75.6 L270.3,71.3 L286.2,63.5 L302.1,59.1 L317.9,52.4 L333.8,48.5 L349.7,46.7 L365.6,41.5 L381.5,46.7 L397.4,44.5 L413.3,50.7 L429.2,53.9 L445.1,59.4 L461.0,64.5 L476.9,69.1 L492.8,71.3 L508.7,77.3 L524.6,73.5 L540.5,73.4 L556.4,72.9 L572.3,70.1 L588.2,65.3 L604.1,57.7 L620.0,57.0 L620,210 Z" fill="url(#g2)"/>
-<polyline points="0.0,60.3 15.9,53.7 31.8,48.8 47.7,43.8 63.6,47.6 79.5,46.9 95.4,47.5 111.3,45.4 127.2,50.4 143.1,61.8 159.0,64.4 174.9,67.9 190.8,71.6 206.7,78.4 222.6,79.4 238.5,74.5 254.4,75.6 270.3,71.3 286.2,63.5 302.1,59.1 317.9,52.4 333.8,48.5 349.7,46.7 365.6,41.5 381.5,46.7 397.4,44.5 413.3,50.7 429.2,53.9 445.1,59.4 461.0,64.5 476.9,69.1 492.8,71.3 508.7,77.3 524.6,73.5 540.5,73.4 556.4,72.9 572.3,70.1 588.2,65.3 604.1,57.7 620.0,57.0" fill="none" stroke="var(--accent)" stroke-width="2.4" stroke-linejoin="round" stroke-linecap="round"/>
-<circle cx="620.0" cy="57.0" r="4.5" fill="var(--accent)"/>
-</svg></div></div>
-<div class="legend"><span><i style="background:var(--accent)"></i>rps</span><span><i style="background:var(--accent2)"></i>vus</span></div>
-</div>
 <div style="display:flex;flex-direction:column;gap:18px;min-width:0">
 <div class="card c-border">
-<h3><svg class="ic " viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="m8 12.5 2.8 2.8L16.5 9"/></svg> Thresholds</h3>
-<div class="kv"><span><span class="chip ok">PASS</span> http_req_duration p95&lt;400ms</span><b class="mono">182 ms</b></div>
-<div class="kv"><span><span class="chip ok">PASS</span> http_req_failed rate&lt;1%</span><b class="mono">0.42%</b></div>
-<div class="kv"><span><span class="chip warn">WARN</span> checks rate&gt;95%</span><b class="mono">94.7%</b></div>
-<div class="kv"><span><span class="chip info">INFO</span> iteration_duration avg</span><b class="mono">204 ms</b></div>
+<h3><svg class="ic " viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 12h4l3-8 4 16 3-8h6"/></svg> Hits/sec vs Throughput — LoadRunner-style overlay</h3>
+<div class="chart-wrap"><svg class="chart" viewBox="0 0 620 190" preserveAspectRatio="none"><line x1="0" x2="620" y1="48" y2="48" stroke="var(--border)" stroke-dasharray="3 5"/><line x1="0" x2="620" y1="95" y2="95" stroke="var(--border)" stroke-dasharray="3 5"/><line x1="0" x2="620" y1="143" y2="143" stroke="var(--border)" stroke-dasharray="3 5"/><polyline points="0.0,77.5 14.1,71.3 28.2,65.5 42.3,60.0 56.4,55.2 70.5,51.3 84.5,48.3 98.6,46.4 112.7,45.6 126.8,45.9 140.9,47.4 155.0,49.9 169.1,53.4 183.2,57.6 197.3,62.4 211.4,67.6 225.5,73.0 239.5,78.3 253.6,83.3 267.7,87.8 281.8,91.6 295.9,94.5 310.0,96.4 324.1,97.3 338.2,97.0 352.3,95.5 366.4,92.9 380.5,89.4 394.5,84.9 408.6,79.7 422.7,74.0 436.8,68.0 450.9,61.8 465.0,55.8 479.1,50.1 493.2,45.1 507.3,40.7 521.4,37.3 535.5,34.9 549.5,33.7 563.6,33.6 577.7,34.6 591.8,36.7 605.9,39.8 620.0,43.7" fill="none" stroke="var(--accent)" stroke-width="2.2" stroke-linejoin="round" opacity="1"/><polyline points="0.0,101.5 14.1,98.2 28.2,95.4 42.3,93.3 56.4,92.0 70.5,91.4 84.5,91.6 98.6,92.6 112.7,94.4 126.8,96.7 140.9,99.6 155.0,102.9 169.1,106.5 183.2,110.1 197.3,113.7 211.4,117.2 225.5,120.2 239.5,122.8 253.6,124.8 267.7,126.1 281.8,126.7 295.9,126.5 310.0,125.4 324.1,123.6 338.2,121.1 352.3,118.0 366.4,114.4 380.5,110.5 394.5,106.3 408.6,102.0 422.7,97.9 436.8,94.0 450.9,90.4 465.0,87.4 479.1,85.1 493.2,83.4 507.3,82.5 521.4,82.4 535.5,83.1 549.5,84.5 563.6,86.6 577.7,89.3 591.8,92.4 605.9,95.9 620.0,99.5" fill="none" stroke="var(--accent2)" stroke-width="2.2" stroke-linejoin="round" opacity="0.85"/></svg></div>
+<div class="legend"><span><i style="background:var(--accent)"></i>hits/sec</span><span><i style="background:var(--accent2)"></i>KB/sec</span></div>
 </div>
 <div class="card c-border">
-<h3><svg class="ic " viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3.5" y="3.5" width="17" height="7" rx="2"/><rect x="3.5" y="13.5" width="17" height="7" rx="2"/><circle cx="8" cy="7" r=".8"/><circle cx="8" cy="17" r=".8"/></svg> Pod Health</h3>
-<div class="kv"><span><i class="dot ok"></i>k6-job-x7f2</span><b class="mono">cpu 1.8 / mem 612Mi</b></div>
-<div class="kv"><span><i class="dot ok"></i>network in</span><b class="mono">42 Mbps</b></div>
-<div class="kv"><span><i class="dot warn"></i>restarts</span><b class="mono">0</b></div>
+<h3><svg class="ic " viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 20v-7"/><path d="M11 20V6"/><path d="M17 20v-11"/><path d="M2 20h20"/></svg> Response Time Distribution</h3>
+<svg class="chart" viewBox="0 0 420 170" preserveAspectRatio="none"><rect x="12.6" y="81.1" width="44.8" height="66.9" rx="3" fill="var(--accent)" opacity="0.55"/>
+<text x="35.0" y="164" text-anchor="middle" fill="var(--muted)" font-size="10">p50</text><rect x="82.6" y="73.2" width="44.8" height="74.8" rx="3" fill="var(--accent)" opacity="0.55"/>
+<text x="105.0" y="164" text-anchor="middle" fill="var(--muted)" font-size="10">p75</text><rect x="152.6" y="63.6" width="44.8" height="84.4" rx="3" fill="var(--accent)" opacity="0.55"/>
+<text x="175.0" y="164" text-anchor="middle" fill="var(--muted)" font-size="10">p90</text><rect x="222.6" y="52.8" width="44.8" height="95.2" rx="3" fill="var(--accent)" opacity="0.55"/>
+<text x="245.0" y="164" text-anchor="middle" fill="var(--muted)" font-size="10">p95</text><rect x="292.6" y="44.9" width="44.8" height="103.1" rx="3" fill="var(--accent)" opacity="0.55"/>
+<text x="315.0" y="164" text-anchor="middle" fill="var(--muted)" font-size="10">p96</text><rect x="362.6" y="12.0" width="44.8" height="136.0" rx="3" fill="var(--accent)" opacity="1"/>
+<text x="385.0" y="164" text-anchor="middle" fill="var(--muted)" font-size="10">p99</text></svg>
+<div class="dim" style="font-size:.78rem;margin-top:6px">http_req_duration (ms) across 18.4M samples</div>
+</div>
+</div>
+
+<div style="display:flex;flex-direction:column;gap:18px;min-width:0">
+<div class="card c-border">
+<h3><svg class="ic " viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 2 4.5 5v6c0 5 3.2 8.4 7.5 11 4.3-2.6 7.5-6 7.5-11V5L12 2Z"/><path d="m9 11.5 2.2 2.2L15.5 9"/></svg> SLA Summary</h3>
+<table class="tbl"><thead><tr><th>Goal</th><th>Target</th><th>Actual</th><th>Verdict</th></tr></thead><tbody>
+<tr><td>p95 latency</td><td class="mono">≤400 ms</td><td class="mono">182 ms</td><td><span class="chip ok">PASS</span></td></tr>
+<tr><td>Error rate</td><td class="mono">≤1%</td><td class="mono">0.11%</td><td><span class="chip ok">PASS</span></td></tr>
+<tr><td>RPS capacity</td><td class="mono">≥350</td><td class="mono">408</td><td><span class="chip ok">PASS</span></td></tr>
+<tr><td>Check success</td><td class="mono">≥99%</td><td class="mono">99.62%</td><td><span class="chip warn">WARN</span></td></tr>
+</tbody></table>
+</div>
+<div class="card c-border">
+<h3><svg class="ic " viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><ellipse cx="12" cy="5.5" rx="7.5" ry="3"/><path d="M4.5 5.5v13c0 1.7 3.4 3 7.5 3s7.5-1.3 7.5-3v-13"/><path d="M4.5 12c0 1.7 3.4 3 7.5 3s7.5-1.3 7.5-3"/></svg> Errors Over Time</h3>
+<svg class="chart" viewBox="0 0 300 150" preserveAspectRatio="none"><rect x="9.0" y="99.0" width="32.0" height="29.0" rx="3" fill="var(--danger)" opacity="0.55"/>
+<text x="25.0" y="144" text-anchor="middle" fill="var(--muted)" font-size="10">11:50</text><rect x="59.0" y="50.7" width="32.0" height="77.3" rx="3" fill="var(--danger)" opacity="0.55"/>
+<text x="75.0" y="144" text-anchor="middle" fill="var(--muted)" font-size="10">12:00</text><rect x="109.0" y="89.3" width="32.0" height="38.7" rx="3" fill="var(--danger)" opacity="0.55"/>
+<text x="125.0" y="144" text-anchor="middle" fill="var(--muted)" font-size="10">12:10</text><rect x="159.0" y="12.0" width="32.0" height="116.0" rx="3" fill="var(--danger)" opacity="0.55"/>
+<text x="175.0" y="144" text-anchor="middle" fill="var(--muted)" font-size="10">12:20</text><rect x="209.0" y="70.0" width="32.0" height="58.0" rx="3" fill="var(--danger)" opacity="0.55"/>
+<text x="225.0" y="144" text-anchor="middle" fill="var(--muted)" font-size="10">12:30</text><rect x="259.0" y="108.7" width="32.0" height="19.3" rx="3" fill="var(--danger)" opacity="1"/>
+<text x="275.0" y="144" text-anchor="middle" fill="var(--muted)" font-size="10">undefined</text></svg>
+</div>
+<div class="card c-border">
+<h3><svg class="ic " viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M13.5 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8.5L13.5 3Z"/><path d="M13.5 3v5.5H19"/></svg> Artifacts</h3>
+<div class="kv"><span>Summary JSON</span><a href="#" class="mono">run-1041-summary.json</a></div>
+<div class="kv"><span>k6 raw output</span><a href="#" class="mono">run-1041-k6.jsonl</a></div>
+<div class="kv"><span>Metric CSV bundle</span><a href="#" class="mono">run-1041-metrics.zip</a></div>
+<div class="kv"><span>PDF executive report</span><a href="#" class="mono">run-1041-report.pdf</a></div>
 </div>
 </div>
 </section>
 
 <section class="card c-border" style="margin-top:18px">
-<h3><svg class="ic " viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="m7.5 9.5 3 3-3 3"/><path d="M12.5 16h4"/></svg> Engine Output</h3>
-<div class="log" id="log"></div>
+<h3><svg class="ic " viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 20v-7"/><path d="M11 20V6"/><path d="M17 20v-11"/><path d="M2 20h20"/></svg> Per-Endpoint Statistics</h3>
+<table class="tbl"><thead><tr><th>Endpoint</th><th>Count</th><th>Avg</th><th>Min</th><th>Med</th><th>p90</th><th>p95</th><th>p99</th><th>Max</th><th>Errors</th></tr></thead><tbody>
+<tr><td class="mono">POST /v1/auth/authorize</td><td class="mono">4.61M</td><td class="mono">94 ms</td><td class="mono">61</td><td class="mono">88</td><td class="mono">121</td><td class="mono">138</td><td class="mono">176</td><td class="mono">402</td><td class="mono">0.04%</td></tr><tr><td class="mono">GET /v1/accounts/balance</td><td class="mono">6.02M</td><td class="mono">71 ms</td><td class="mono">44</td><td class="mono">68</td><td class="mono">95</td><td class="mono">108</td><td class="mono">141</td><td class="mono">388</td><td class="mono">0.09%</td></tr><tr><td class="mono">POST /v1/payments/transfer</td><td class="mono">3.11M</td><td class="mono">142 ms</td><td class="mono">88</td><td class="mono">135</td><td class="mono">188</td><td class="mono">214</td><td class="mono">268</td><td class="mono">690</td><td class="mono">0.31%</td></tr><tr><td class="mono">GET /v1/payments/status</td><td class="mono">4.66M</td><td class="mono">63 ms</td><td class="mono">39</td><td class="mono">60</td><td class="mono">84</td><td class="mono">96</td><td class="mono">122</td><td class="mono">310</td><td class="mono">0.02%</td></tr>
+</tbody></table>
 </section>
-
-<script>
-(function(){
-  var log=document.getElementById('log'),vu=250,rps=1248,p95=182,err=.42,n=0;
-  var lines=['level=info msg="starting k6" v0.50.0','level=info msg="init scenario: steady-500"','level=info msg="VU reached 500"','level=info msg="threshold ok: p95<400ms"','level=warn msg="checks rate 94.7% below 95% budget"'];
-  function ts(){var d=new Date();return d.toISOString().substr(11,8);}
-  function line(){var pool=[['info','iteration complete'],['info','metric flush ok'],['ok','200 GET /v1/orders 178ms'],['ok','201 POST /v1/orders 203ms'],['warn','slow response 512ms on /v1/cart'],['ok','200 GET /v1/products?q=sku 121ms'],['err','429 POST /v1/orders retry']];
-    var p=pool[Math.floor(Math.random()*pool.length)];
-    var cls=p[0]==='ok'?'lvl-ok':p[0]==='warn'?'lvl-warn':p[0]==='err'?'lvl-err':'lvl-info';
-    var el=document.createElement('div');el.innerHTML='<span class="t">'+ts()+'</span> <span class="'+cls+'">['+p[0]+']</span> '+p[1];
-    log.appendChild(el);while(log.children.length>42)log.removeChild(log.firstChild);log.scrollTop=log.scrollHeight;}
-  lines.forEach(function(l,i){setTimeout(function(){var el=document.createElement('div');el.innerHTML='<span class="t">'+ts()+'</span> <span class="lvl-info">'+l+'</span>';log.appendChild(el);log.scrollTop=log.scrollHeight;},i*350);});
-  setInterval(line,1600);
-  setInterval(function(){
-    n++;vu=Math.min(500,vu+(Math.random()<.7?1:0));if(n%3===0&&Math.random()<.4)vu-=1;
-    rps=Math.max(900,Math.min(1500,rps+Math.round((Math.random()-.48)*40)));
-    p95=Math.max(140,Math.min(260,p95+Math.round((Math.random()-.5)*8)));
-    err=Math.max(.1,Math.min(1.2,err+(Math.random()-.5)*.06));
-    document.getElementById('m-vu').textContent=vu;
-    document.getElementById('m-rps').textContent=rps.toLocaleString();
-    document.getElementById('m-p95').textContent=p95;
-    document.getElementById('m-err').textContent=err.toFixed(2);
-    document.getElementById('m-prog').style.width=Math.min(98,62+n*0.05)+'%';
-  },1000);
-})();
-</script>
 </main>
 </div></div>
 </body>
