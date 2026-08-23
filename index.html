@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>FluxPerf — 50 UI Design Concepts</title><style>
+<title>FluxPerf — 100 UI Design Concepts</title><style>
 *{box-sizing:border-box;margin:0;padding:0}
 :root{--bg:#0b0d13;--sf:#12151f;--bd:#232838;--tx:#e8ecf7;--mut:#8a93ad}
 body{background:var(--bg);color:var(--tx);font-family:'Segoe UI',system-ui,sans-serif;line-height:1.5;padding:0 clamp(16px,4vw,56px) 80px}
@@ -26,18 +26,23 @@ h1 em{font-style:normal;background:linear-gradient(90deg,#22d3ee,#a78bfa,#f472b6
 .ddesc{color:var(--mut);font-size:.82rem;min-height:38px}
 .open{margin-top:12px;font-size:.8rem;font-weight:650;color:#67e8f9}
 .note{margin-top:56px;border:1px dashed var(--bd);border-radius:14px;padding:22px;color:var(--mut);font-size:.9rem;max-width:860px}
+
+.genhead{margin:56px 0 6px;font-size:1.05rem;letter-spacing:.02em;color:#c9d2ea}
+.gentag{font-size:.78rem;color:#7c88a8;font-weight:500;margin-left:10px;letter-spacing:.08em;text-transform:uppercase;border:1px solid var(--bd);border-radius:999px;padding:3px 12px}
 </style></head><body>
 <header class="hero">
-<h1>FluxPerf · <em>50 UI Design Concepts</em></h1>
-<p class="sub">Ten visual themes × five core screens for the API performance-testing platform (scenarios, CSV data mapping, load profiles, k6 execution on K8s/Linux, SSE live monitoring, history and reports). Every file is fully self-contained — open any card below.</p>
+<h1>FluxPerf · <em>100 UI Design Concepts</em></h1>
+<p class="sub">Twenty visual themes covering ten screens for an enterprise API performance-testing platform on k6 OSS — scenarios & CSV data mapping, load profiles, K8s/Linux execution, SSE live monitoring, LoadRunner-style results analysis & SLA reporting, A/B run comparison, transaction flow composer, runner fleet management, and RBAC with full audit trail. Every file is fully self-contained.</p>
 <div class="filters">
-<button class="fc on" data-f="all">All 50</button>
+<button class="fc on" data-f="all">All 100</button>
 <button class="fc" data-f="dark">Dark themes</button>
 <button class="fc" data-f="light">Light themes</button>
+<button class="fc" data-f="suite-core">Core suite (01–50)</button>
+<button class="fc" data-f="suite-pro">Pro suite (51–100)</button>
 </div>
 </header>
-<section class="tsec" data-mode="dark">
-<div class="thead"><h2>01 · Neon Pulse</h2><span class="mode">dark</span><span class="tag">Deep-space dark with cyan/violet neon glow</span><span class="swatches"><i style="background:#0a0e1a"></i><i style="background:#121a2e"></i><i style="background:#22d3ee"></i><i style="background:#a78bfa"></i><i style="background:#e7edff"></i></span></div>
+<h2 class="genhead">Generation 1 — Core Suite · designs 01–50 <span class="gentag">define · run · monitor</span></h2><section class="tsec" data-mode="dark" data-suite="core">
+<div class="thead"><h2>01–05 · Neon Pulse</h2><span class="mode">dark</span><span class="tag">Deep-space dark with cyan/violet neon glow</span><span class="swatches"><i style="background:#0a0e1a"></i><i style="background:#121a2e"></i><i style="background:#22d3ee"></i><i style="background:#a78bfa"></i><i style="background:#e7edff"></i></span></div>
 <div class="tgrid"><a class="dcard" href="01-neon-pulse-dashboard.html">
 <div class="dnum">DESIGN 01</div>
 <div class="dname">Dashboard</div>
@@ -58,8 +63,8 @@ h1 em{font-style:normal;background:linear-gradient(90deg,#22d3ee,#a78bfa,#f472b6
 <div class="dnum">DESIGN 05</div>
 <div class="dname">Load Profiles</div>
 <div class="ddesc">Stage builder, k6 options preview, executor settings.</div>
-<div class="open">Open design →</div></a></div></section><section class="tsec" data-mode="light">
-<div class="thead"><h2>02 · Enterprise Blue</h2><span class="mode">light</span><span class="tag">Clean corporate light theme, crisp borders</span><span class="swatches"><i style="background:#f4f6fb"></i><i style="background:#ffffff"></i><i style="background:#2563eb"></i><i style="background:#6366f1"></i><i style="background:#17203a"></i></span></div>
+<div class="open">Open design →</div></a></div></section><section class="tsec" data-mode="light" data-suite="core">
+<div class="thead"><h2>06–10 · Enterprise Blue</h2><span class="mode">light</span><span class="tag">Clean corporate light theme, crisp borders</span><span class="swatches"><i style="background:#f4f6fb"></i><i style="background:#ffffff"></i><i style="background:#2563eb"></i><i style="background:#6366f1"></i><i style="background:#17203a"></i></span></div>
 <div class="tgrid"><a class="dcard" href="06-enterprise-blue-dashboard.html">
 <div class="dnum">DESIGN 06</div>
 <div class="dname">Dashboard</div>
@@ -80,8 +85,8 @@ h1 em{font-style:normal;background:linear-gradient(90deg,#22d3ee,#a78bfa,#f472b6
 <div class="dnum">DESIGN 10</div>
 <div class="dname">Load Profiles</div>
 <div class="ddesc">Stage builder, k6 options preview, executor settings.</div>
-<div class="open">Open design →</div></a></div></section><section class="tsec" data-mode="dark">
-<div class="thead"><h2>03 · Emerald Night</h2><span class="mode">dark</span><span class="tag">Slate dark with emerald accents, icon rail nav</span><span class="swatches"><i style="background:#0c131d"></i><i style="background:#111c29"></i><i style="background:#34d399"></i><i style="background:#2dd4bf"></i><i style="background:#e4f2ec"></i></span></div>
+<div class="open">Open design →</div></a></div></section><section class="tsec" data-mode="dark" data-suite="core">
+<div class="thead"><h2>11–15 · Emerald Night</h2><span class="mode">dark</span><span class="tag">Slate dark with emerald accents, icon rail nav</span><span class="swatches"><i style="background:#0c131d"></i><i style="background:#111c29"></i><i style="background:#34d399"></i><i style="background:#2dd4bf"></i><i style="background:#e4f2ec"></i></span></div>
 <div class="tgrid"><a class="dcard" href="11-emerald-night-dashboard.html">
 <div class="dnum">DESIGN 11</div>
 <div class="dname">Dashboard</div>
@@ -102,8 +107,8 @@ h1 em{font-style:normal;background:linear-gradient(90deg,#22d3ee,#a78bfa,#f472b6
 <div class="dnum">DESIGN 15</div>
 <div class="dname">Load Profiles</div>
 <div class="ddesc">Stage builder, k6 options preview, executor settings.</div>
-<div class="open">Open design →</div></a></div></section><section class="tsec" data-mode="dark">
-<div class="thead"><h2>04 · Glass Violet</h2><span class="mode">dark</span><span class="tag">Frosted glassmorphism over a violet gradient</span><span class="swatches"><i style="background:#241d5e"></i><i style="background:#3b3480"></i><i style="background:#c4b5fd"></i><i style="background:#7dd3fc"></i><i style="background:#f0edff"></i></span></div>
+<div class="open">Open design →</div></a></div></section><section class="tsec" data-mode="dark" data-suite="core">
+<div class="thead"><h2>16–20 · Glass Violet</h2><span class="mode">dark</span><span class="tag">Frosted glassmorphism over a violet gradient</span><span class="swatches"><i style="background:#241d5e"></i><i style="background:#3b3480"></i><i style="background:#c4b5fd"></i><i style="background:#7dd3fc"></i><i style="background:#f0edff"></i></span></div>
 <div class="tgrid"><a class="dcard" href="16-glass-violet-dashboard.html">
 <div class="dnum">DESIGN 16</div>
 <div class="dname">Dashboard</div>
@@ -124,8 +129,8 @@ h1 em{font-style:normal;background:linear-gradient(90deg,#22d3ee,#a78bfa,#f472b6
 <div class="dnum">DESIGN 20</div>
 <div class="dname">Load Profiles</div>
 <div class="ddesc">Stage builder, k6 options preview, executor settings.</div>
-<div class="open">Open design →</div></a></div></section><section class="tsec" data-mode="light">
-<div class="thead"><h2>05 · Brutal Mono</h2><span class="mode">light</span><span class="tag">Neo-brutalist: hard shadows, black rules, yellow pop</span><span class="swatches"><i style="background:#fffdf3"></i><i style="background:#ffffff"></i><i style="background:#ffd60a"></i><i style="background:#111111"></i><i style="background:#101010"></i></span></div>
+<div class="open">Open design →</div></a></div></section><section class="tsec" data-mode="light" data-suite="core">
+<div class="thead"><h2>21–25 · Brutal Mono</h2><span class="mode">light</span><span class="tag">Neo-brutalist: hard shadows, black rules, yellow pop</span><span class="swatches"><i style="background:#fffdf3"></i><i style="background:#ffffff"></i><i style="background:#ffd60a"></i><i style="background:#111111"></i><i style="background:#101010"></i></span></div>
 <div class="tgrid"><a class="dcard" href="21-brutal-mono-dashboard.html">
 <div class="dnum">DESIGN 21</div>
 <div class="dname">Dashboard</div>
@@ -146,8 +151,8 @@ h1 em{font-style:normal;background:linear-gradient(90deg,#22d3ee,#a78bfa,#f472b6
 <div class="dnum">DESIGN 25</div>
 <div class="dname">Load Profiles</div>
 <div class="ddesc">Stage builder, k6 options preview, executor settings.</div>
-<div class="open">Open design →</div></a></div></section><section class="tsec" data-mode="light">
-<div class="thead"><h2>06 · Pastel Cloud</h2><span class="mode">light</span><span class="tag">Soft lavender/peach pastels, pill shapes, friendly</span><span class="swatches"><i style="background:#faf8ff"></i><i style="background:#ffffff"></i><i style="background:#8b5cf6"></i><i style="background:#fb923c"></i><i style="background:#3d3564"></i></span></div>
+<div class="open">Open design →</div></a></div></section><section class="tsec" data-mode="light" data-suite="core">
+<div class="thead"><h2>26–30 · Pastel Cloud</h2><span class="mode">light</span><span class="tag">Soft lavender/peach pastels, pill shapes, friendly</span><span class="swatches"><i style="background:#faf8ff"></i><i style="background:#ffffff"></i><i style="background:#8b5cf6"></i><i style="background:#fb923c"></i><i style="background:#3d3564"></i></span></div>
 <div class="tgrid"><a class="dcard" href="26-pastel-cloud-dashboard.html">
 <div class="dnum">DESIGN 26</div>
 <div class="dname">Dashboard</div>
@@ -168,8 +173,8 @@ h1 em{font-style:normal;background:linear-gradient(90deg,#22d3ee,#a78bfa,#f472b6
 <div class="dnum">DESIGN 30</div>
 <div class="dname">Load Profiles</div>
 <div class="ddesc">Stage builder, k6 options preview, executor settings.</div>
-<div class="open">Open design →</div></a></div></section><section class="tsec" data-mode="dark">
-<div class="thead"><h2>07 · Terminal Green</h2><span class="mode">dark</span><span class="tag">Full monospace hacker terminal on pure black</span><span class="swatches"><i style="background:#050805"></i><i style="background:#0a120a"></i><i style="background:#22c55e"></i><i style="background:#86efac"></i><i style="background:#b8f5c4"></i></span></div>
+<div class="open">Open design →</div></a></div></section><section class="tsec" data-mode="dark" data-suite="core">
+<div class="thead"><h2>31–35 · Terminal Green</h2><span class="mode">dark</span><span class="tag">Full monospace hacker terminal on pure black</span><span class="swatches"><i style="background:#050805"></i><i style="background:#0a120a"></i><i style="background:#22c55e"></i><i style="background:#86efac"></i><i style="background:#b8f5c4"></i></span></div>
 <div class="tgrid"><a class="dcard" href="31-terminal-green-dashboard.html">
 <div class="dnum">DESIGN 31</div>
 <div class="dname">Dashboard</div>
@@ -190,8 +195,8 @@ h1 em{font-style:normal;background:linear-gradient(90deg,#22d3ee,#a78bfa,#f472b6
 <div class="dnum">DESIGN 35</div>
 <div class="dname">Load Profiles</div>
 <div class="ddesc">Stage builder, k6 options preview, executor settings.</div>
-<div class="open">Open design →</div></a></div></section><section class="tsec" data-mode="light">
-<div class="thead"><h2>08 · Crimson Ink</h2><span class="mode">light</span><span class="tag">Editorial paper-white with serif heads and red ink</span><span class="swatches"><i style="background:#fbfaf7"></i><i style="background:#ffffff"></i><i style="background:#dc2626"></i><i style="background:#1d4ed8"></i><i style="background:#191713"></i></span></div>
+<div class="open">Open design →</div></a></div></section><section class="tsec" data-mode="light" data-suite="core">
+<div class="thead"><h2>36–40 · Crimson Ink</h2><span class="mode">light</span><span class="tag">Editorial paper-white with serif heads and red ink</span><span class="swatches"><i style="background:#fbfaf7"></i><i style="background:#ffffff"></i><i style="background:#dc2626"></i><i style="background:#1d4ed8"></i><i style="background:#191713"></i></span></div>
 <div class="tgrid"><a class="dcard" href="36-crimson-ink-dashboard.html">
 <div class="dnum">DESIGN 36</div>
 <div class="dname">Dashboard</div>
@@ -212,8 +217,8 @@ h1 em{font-style:normal;background:linear-gradient(90deg,#22d3ee,#a78bfa,#f472b6
 <div class="dnum">DESIGN 40</div>
 <div class="dname">Load Profiles</div>
 <div class="ddesc">Stage builder, k6 options preview, executor settings.</div>
-<div class="open">Open design →</div></a></div></section><section class="tsec" data-mode="dark">
-<div class="thead"><h2>09 · Solar Flare</h2><span class="mode">dark</span><span class="tag">Warm charcoal with molten orange gradients</span><span class="swatches"><i style="background:#161210"></i><i style="background:#211a15"></i><i style="background:#f97316"></i><i style="background:#fbbf24"></i><i style="background:#fdf3e7"></i></span></div>
+<div class="open">Open design →</div></a></div></section><section class="tsec" data-mode="dark" data-suite="core">
+<div class="thead"><h2>41–45 · Solar Flare</h2><span class="mode">dark</span><span class="tag">Warm charcoal with molten orange gradients</span><span class="swatches"><i style="background:#161210"></i><i style="background:#211a15"></i><i style="background:#f97316"></i><i style="background:#fbbf24"></i><i style="background:#fdf3e7"></i></span></div>
 <div class="tgrid"><a class="dcard" href="41-solar-flare-dashboard.html">
 <div class="dnum">DESIGN 41</div>
 <div class="dname">Dashboard</div>
@@ -234,8 +239,8 @@ h1 em{font-style:normal;background:linear-gradient(90deg,#22d3ee,#a78bfa,#f472b6
 <div class="dnum">DESIGN 45</div>
 <div class="dname">Load Profiles</div>
 <div class="ddesc">Stage builder, k6 options preview, executor settings.</div>
-<div class="open">Open design →</div></a></div></section><section class="tsec" data-mode="light">
-<div class="thead"><h2>10 · Arctic Teal</h2><span class="mode">light</span><span class="tag">Cool SaaS light theme, teal + navy, subtle grid backdrop</span><span class="swatches"><i style="background:#eef6f6"></i><i style="background:#ffffff"></i><i style="background:#0d9488"></i><i style="background:#155e93"></i><i style="background:#12333a"></i></span></div>
+<div class="open">Open design →</div></a></div></section><section class="tsec" data-mode="light" data-suite="core">
+<div class="thead"><h2>46–50 · Arctic Teal</h2><span class="mode">light</span><span class="tag">Cool SaaS light theme, teal + navy, subtle grid backdrop</span><span class="swatches"><i style="background:#eef6f6"></i><i style="background:#ffffff"></i><i style="background:#0d9488"></i><i style="background:#155e93"></i><i style="background:#12333a"></i></span></div>
 <div class="tgrid"><a class="dcard" href="46-arctic-teal-dashboard.html">
 <div class="dnum">DESIGN 46</div>
 <div class="dname">Dashboard</div>
@@ -256,11 +261,234 @@ h1 em{font-style:normal;background:linear-gradient(90deg,#22d3ee,#a78bfa,#f472b6
 <div class="dnum">DESIGN 50</div>
 <div class="dname">Load Profiles</div>
 <div class="ddesc">Stage builder, k6 options preview, executor settings.</div>
+<div class="open">Open design →</div></a></div></section><h2 class="genhead">Generation 2 — Pro Suite · designs 51–100 <span class="gentag">LoadRunner · NeoLoad · BlazeMeter-grade workflows</span></h2><section class="tsec" data-mode="dark" data-suite="pro">
+<div class="thead"><h2>51–55 · Obsidian Gold</h2><span class="mode">dark</span><span class="tag">Luxury near-black with brushed gold accents</span><span class="swatches"><i style="background:#0c0b09"></i><i style="background:#161310"></i><i style="background:#d4af37"></i><i style="background:#b08d2e"></i><i style="background:#f3ead8"></i></span></div>
+<div class="tgrid"><a class="dcard" href="51-obsidian-gold-flow-composer.html">
+<div class="dnum">DESIGN 51</div>
+<div class="dname">Flow Composer</div>
+<div class="ddesc">Transactions, steps, think times, extractions, assertions.</div>
+<div class="open">Open design →</div></a><a class="dcard" href="52-obsidian-gold-results-analysis.html">
+<div class="dnum">DESIGN 52</div>
+<div class="dname">Results Analysis</div>
+<div class="ddesc">SLA verdicts, percentiles, hits/sec overlay, exports.</div>
+<div class="open">Open design →</div></a><a class="dcard" href="53-obsidian-gold-run-comparison.html">
+<div class="dnum">DESIGN 53</div>
+<div class="dname">Run Comparison</div>
+<div class="ddesc">A/B overlay charts, delta table, promotion verdict.</div>
+<div class="open">Open design →</div></a><a class="dcard" href="54-obsidian-gold-runner-fleet.html">
+<div class="dnum">DESIGN 54</div>
+<div class="dname">Runner Fleet</div>
+<div class="ddesc">K8s + Linux worker grid, queues, autoscale controls.</div>
+<div class="open">Open design →</div></a><a class="dcard" href="55-obsidian-gold-admin-audit.html">
+<div class="dnum">DESIGN 55</div>
+<div class="dname">Admin · Audit</div>
+<div class="ddesc">RBAC matrix, secrets vault, immutable audit trail.</div>
+<div class="open">Open design →</div></a></div></section><section class="tsec" data-mode="dark" data-suite="pro">
+<div class="thead"><h2>56–60 · Cyber Lime</h2><span class="mode">dark</span><span class="tag">Graphite tech-dark charged with electric lime</span><span class="swatches"><i style="background:#0e1210"></i><i style="background:#141a15"></i><i style="background:#a3e635"></i><i style="background:#34d399"></i><i style="background:#eaf5df"></i></span></div>
+<div class="tgrid"><a class="dcard" href="56-cyber-lime-flow-composer.html">
+<div class="dnum">DESIGN 56</div>
+<div class="dname">Flow Composer</div>
+<div class="ddesc">Transactions, steps, think times, extractions, assertions.</div>
+<div class="open">Open design →</div></a><a class="dcard" href="57-cyber-lime-results-analysis.html">
+<div class="dnum">DESIGN 57</div>
+<div class="dname">Results Analysis</div>
+<div class="ddesc">SLA verdicts, percentiles, hits/sec overlay, exports.</div>
+<div class="open">Open design →</div></a><a class="dcard" href="58-cyber-lime-run-comparison.html">
+<div class="dnum">DESIGN 58</div>
+<div class="dname">Run Comparison</div>
+<div class="ddesc">A/B overlay charts, delta table, promotion verdict.</div>
+<div class="open">Open design →</div></a><a class="dcard" href="59-cyber-lime-runner-fleet.html">
+<div class="dnum">DESIGN 59</div>
+<div class="dname">Runner Fleet</div>
+<div class="ddesc">K8s + Linux worker grid, queues, autoscale controls.</div>
+<div class="open">Open design →</div></a><a class="dcard" href="60-cyber-lime-admin-audit.html">
+<div class="dnum">DESIGN 60</div>
+<div class="dname">Admin · Audit</div>
+<div class="ddesc">RBAC matrix, secrets vault, immutable audit trail.</div>
+<div class="open">Open design →</div></a></div></section><section class="tsec" data-mode="light" data-suite="pro">
+<div class="thead"><h2>61–65 · Rose Quartz</h2><span class="mode">light</span><span class="tag">Blush-pink light UI, soft and modern</span><span class="swatches"><i style="background:#fdf3f6"></i><i style="background:#ffffff"></i><i style="background:#db2777"></i><i style="background:#9333ea"></i><i style="background:#472b3f"></i></span></div>
+<div class="tgrid"><a class="dcard" href="61-rose-quartz-flow-composer.html">
+<div class="dnum">DESIGN 61</div>
+<div class="dname">Flow Composer</div>
+<div class="ddesc">Transactions, steps, think times, extractions, assertions.</div>
+<div class="open">Open design →</div></a><a class="dcard" href="62-rose-quartz-results-analysis.html">
+<div class="dnum">DESIGN 62</div>
+<div class="dname">Results Analysis</div>
+<div class="ddesc">SLA verdicts, percentiles, hits/sec overlay, exports.</div>
+<div class="open">Open design →</div></a><a class="dcard" href="63-rose-quartz-run-comparison.html">
+<div class="dnum">DESIGN 63</div>
+<div class="dname">Run Comparison</div>
+<div class="ddesc">A/B overlay charts, delta table, promotion verdict.</div>
+<div class="open">Open design →</div></a><a class="dcard" href="64-rose-quartz-runner-fleet.html">
+<div class="dnum">DESIGN 64</div>
+<div class="dname">Runner Fleet</div>
+<div class="ddesc">K8s + Linux worker grid, queues, autoscale controls.</div>
+<div class="open">Open design →</div></a><a class="dcard" href="65-rose-quartz-admin-audit.html">
+<div class="dnum">DESIGN 65</div>
+<div class="dname">Admin · Audit</div>
+<div class="ddesc">RBAC matrix, secrets vault, immutable audit trail.</div>
+<div class="open">Open design →</div></a></div></section><section class="tsec" data-mode="dark" data-suite="pro">
+<div class="thead"><h2>66–70 · Deep Ocean</h2><span class="mode">dark</span><span class="tag">Fintech-grade navy with sky-blue data accents</span><span class="swatches"><i style="background:#082032"></i><i style="background:#0d2c44"></i><i style="background:#38bdf8"></i><i style="background:#7dd3fc"></i><i style="background:#e3f2fd"></i></span></div>
+<div class="tgrid"><a class="dcard" href="66-deep-ocean-flow-composer.html">
+<div class="dnum">DESIGN 66</div>
+<div class="dname">Flow Composer</div>
+<div class="ddesc">Transactions, steps, think times, extractions, assertions.</div>
+<div class="open">Open design →</div></a><a class="dcard" href="67-deep-ocean-results-analysis.html">
+<div class="dnum">DESIGN 67</div>
+<div class="dname">Results Analysis</div>
+<div class="ddesc">SLA verdicts, percentiles, hits/sec overlay, exports.</div>
+<div class="open">Open design →</div></a><a class="dcard" href="68-deep-ocean-run-comparison.html">
+<div class="dnum">DESIGN 68</div>
+<div class="dname">Run Comparison</div>
+<div class="ddesc">A/B overlay charts, delta table, promotion verdict.</div>
+<div class="open">Open design →</div></a><a class="dcard" href="69-deep-ocean-runner-fleet.html">
+<div class="dnum">DESIGN 69</div>
+<div class="dname">Runner Fleet</div>
+<div class="ddesc">K8s + Linux worker grid, queues, autoscale controls.</div>
+<div class="open">Open design →</div></a><a class="dcard" href="70-deep-ocean-admin-audit.html">
+<div class="dnum">DESIGN 70</div>
+<div class="dname">Admin · Audit</div>
+<div class="ddesc">RBAC matrix, secrets vault, immutable audit trail.</div>
+<div class="open">Open design →</div></a></div></section><section class="tsec" data-mode="dark" data-suite="pro">
+<div class="thead"><h2>71–75 · Carbon Fiber</h2><span class="mode">dark</span><span class="tag">Industrial graphite, uppercase heads, steel blue</span><span class="swatches"><i style="background:#141618"></i><i style="background:#1b1e21"></i><i style="background:#60a5fa"></i><i style="background:#94a3b8"></i><i style="background:#e5eaee"></i></span></div>
+<div class="tgrid"><a class="dcard" href="71-carbon-fiber-flow-composer.html">
+<div class="dnum">DESIGN 71</div>
+<div class="dname">Flow Composer</div>
+<div class="ddesc">Transactions, steps, think times, extractions, assertions.</div>
+<div class="open">Open design →</div></a><a class="dcard" href="72-carbon-fiber-results-analysis.html">
+<div class="dnum">DESIGN 72</div>
+<div class="dname">Results Analysis</div>
+<div class="ddesc">SLA verdicts, percentiles, hits/sec overlay, exports.</div>
+<div class="open">Open design →</div></a><a class="dcard" href="73-carbon-fiber-run-comparison.html">
+<div class="dnum">DESIGN 73</div>
+<div class="dname">Run Comparison</div>
+<div class="ddesc">A/B overlay charts, delta table, promotion verdict.</div>
+<div class="open">Open design →</div></a><a class="dcard" href="74-carbon-fiber-runner-fleet.html">
+<div class="dnum">DESIGN 74</div>
+<div class="dname">Runner Fleet</div>
+<div class="ddesc">K8s + Linux worker grid, queues, autoscale controls.</div>
+<div class="open">Open design →</div></a><a class="dcard" href="75-carbon-fiber-admin-audit.html">
+<div class="dnum">DESIGN 75</div>
+<div class="dname">Admin · Audit</div>
+<div class="ddesc">RBAC matrix, secrets vault, immutable audit trail.</div>
+<div class="open">Open design →</div></a></div></section><section class="tsec" data-mode="light" data-suite="pro">
+<div class="thead"><h2>76–80 · Matcha Studio</h2><span class="mode">light</span><span class="tag">Calm cream-and-green editorial workspace</span><span class="swatches"><i style="background:#f6f7f0"></i><i style="background:#ffffff"></i><i style="background:#4d7c0f"></i><i style="background:#15803d"></i><i style="background:#27321f"></i></span></div>
+<div class="tgrid"><a class="dcard" href="76-matcha-studio-flow-composer.html">
+<div class="dnum">DESIGN 76</div>
+<div class="dname">Flow Composer</div>
+<div class="ddesc">Transactions, steps, think times, extractions, assertions.</div>
+<div class="open">Open design →</div></a><a class="dcard" href="77-matcha-studio-results-analysis.html">
+<div class="dnum">DESIGN 77</div>
+<div class="dname">Results Analysis</div>
+<div class="ddesc">SLA verdicts, percentiles, hits/sec overlay, exports.</div>
+<div class="open">Open design →</div></a><a class="dcard" href="78-matcha-studio-run-comparison.html">
+<div class="dnum">DESIGN 78</div>
+<div class="dname">Run Comparison</div>
+<div class="ddesc">A/B overlay charts, delta table, promotion verdict.</div>
+<div class="open">Open design →</div></a><a class="dcard" href="79-matcha-studio-runner-fleet.html">
+<div class="dnum">DESIGN 79</div>
+<div class="dname">Runner Fleet</div>
+<div class="ddesc">K8s + Linux worker grid, queues, autoscale controls.</div>
+<div class="open">Open design →</div></a><a class="dcard" href="80-matcha-studio-admin-audit.html">
+<div class="dnum">DESIGN 80</div>
+<div class="dname">Admin · Audit</div>
+<div class="ddesc">RBAC matrix, secrets vault, immutable audit trail.</div>
+<div class="open">Open design →</div></a></div></section><section class="tsec" data-mode="dark" data-suite="pro">
+<div class="thead"><h2>81–85 · Ultraviolet</h2><span class="mode">dark</span><span class="tag">Cyberpunk black lit by electric purple/magenta</span><span class="swatches"><i style="background:#0a0714"></i><i style="background:#150f26"></i><i style="background:#8b5cf6"></i><i style="background:#d946ef"></i><i style="background:#ede9fe"></i></span></div>
+<div class="tgrid"><a class="dcard" href="81-ultraviolet-flow-composer.html">
+<div class="dnum">DESIGN 81</div>
+<div class="dname">Flow Composer</div>
+<div class="ddesc">Transactions, steps, think times, extractions, assertions.</div>
+<div class="open">Open design →</div></a><a class="dcard" href="82-ultraviolet-results-analysis.html">
+<div class="dnum">DESIGN 82</div>
+<div class="dname">Results Analysis</div>
+<div class="ddesc">SLA verdicts, percentiles, hits/sec overlay, exports.</div>
+<div class="open">Open design →</div></a><a class="dcard" href="83-ultraviolet-run-comparison.html">
+<div class="dnum">DESIGN 83</div>
+<div class="dname">Run Comparison</div>
+<div class="ddesc">A/B overlay charts, delta table, promotion verdict.</div>
+<div class="open">Open design →</div></a><a class="dcard" href="84-ultraviolet-runner-fleet.html">
+<div class="dnum">DESIGN 84</div>
+<div class="dname">Runner Fleet</div>
+<div class="ddesc">K8s + Linux worker grid, queues, autoscale controls.</div>
+<div class="open">Open design →</div></a><a class="dcard" href="85-ultraviolet-admin-audit.html">
+<div class="dnum">DESIGN 85</div>
+<div class="dname">Admin · Audit</div>
+<div class="ddesc">RBAC matrix, secrets vault, immutable audit trail.</div>
+<div class="open">Open design →</div></a></div></section><section class="tsec" data-mode="dark" data-suite="pro">
+<div class="thead"><h2>86–90 · Copper Canyon</h2><span class="mode">dark</span><span class="tag">Warm rust-dark with molten copper highlights</span><span class="swatches"><i style="background:#171009"></i><i style="background:#20160c"></i><i style="background:#e07a3f"></i><i style="background:#f2b366"></i><i style="background:#fbeadb"></i></span></div>
+<div class="tgrid"><a class="dcard" href="86-copper-canyon-flow-composer.html">
+<div class="dnum">DESIGN 86</div>
+<div class="dname">Flow Composer</div>
+<div class="ddesc">Transactions, steps, think times, extractions, assertions.</div>
+<div class="open">Open design →</div></a><a class="dcard" href="87-copper-canyon-results-analysis.html">
+<div class="dnum">DESIGN 87</div>
+<div class="dname">Results Analysis</div>
+<div class="ddesc">SLA verdicts, percentiles, hits/sec overlay, exports.</div>
+<div class="open">Open design →</div></a><a class="dcard" href="88-copper-canyon-run-comparison.html">
+<div class="dnum">DESIGN 88</div>
+<div class="dname">Run Comparison</div>
+<div class="ddesc">A/B overlay charts, delta table, promotion verdict.</div>
+<div class="open">Open design →</div></a><a class="dcard" href="89-copper-canyon-runner-fleet.html">
+<div class="dnum">DESIGN 89</div>
+<div class="dname">Runner Fleet</div>
+<div class="ddesc">K8s + Linux worker grid, queues, autoscale controls.</div>
+<div class="open">Open design →</div></a><a class="dcard" href="90-copper-canyon-admin-audit.html">
+<div class="dnum">DESIGN 90</div>
+<div class="dname">Admin · Audit</div>
+<div class="ddesc">RBAC matrix, secrets vault, immutable audit trail.</div>
+<div class="open">Open design →</div></a></div></section><section class="tsec" data-mode="light" data-suite="pro">
+<div class="thead"><h2>91–95 · Porcelain Blue</h2><span class="mode">light</span><span class="tag">Data-dense trading-desk light UI, royal blue</span><span class="swatches"><i style="background:#f7f9fc"></i><i style="background:#ffffff"></i><i style="background:#1d4ed8"></i><i style="background:#0e7490"></i><i style="background:#0f2440"></i></span></div>
+<div class="tgrid"><a class="dcard" href="91-porcelain-blue-flow-composer.html">
+<div class="dnum">DESIGN 91</div>
+<div class="dname">Flow Composer</div>
+<div class="ddesc">Transactions, steps, think times, extractions, assertions.</div>
+<div class="open">Open design →</div></a><a class="dcard" href="92-porcelain-blue-results-analysis.html">
+<div class="dnum">DESIGN 92</div>
+<div class="dname">Results Analysis</div>
+<div class="ddesc">SLA verdicts, percentiles, hits/sec overlay, exports.</div>
+<div class="open">Open design →</div></a><a class="dcard" href="93-porcelain-blue-run-comparison.html">
+<div class="dnum">DESIGN 93</div>
+<div class="dname">Run Comparison</div>
+<div class="ddesc">A/B overlay charts, delta table, promotion verdict.</div>
+<div class="open">Open design →</div></a><a class="dcard" href="94-porcelain-blue-runner-fleet.html">
+<div class="dnum">DESIGN 94</div>
+<div class="dname">Runner Fleet</div>
+<div class="ddesc">K8s + Linux worker grid, queues, autoscale controls.</div>
+<div class="open">Open design →</div></a><a class="dcard" href="95-porcelain-blue-admin-audit.html">
+<div class="dnum">DESIGN 95</div>
+<div class="dname">Admin · Audit</div>
+<div class="ddesc">RBAC matrix, secrets vault, immutable audit trail.</div>
+<div class="open">Open design →</div></a></div></section><section class="tsec" data-mode="dark" data-suite="pro">
+<div class="thead"><h2>96–100 · Midnight Aurora</h2><span class="mode">dark</span><span class="tag">Deep arctic night under teal-mint aurora glow</span><span class="swatches"><i style="background:#06111a"></i><i style="background:#0b1c29"></i><i style="background:#2dd4bf"></i><i style="background:#a3e635"></i><i style="background:#dff7f2"></i></span></div>
+<div class="tgrid"><a class="dcard" href="96-midnight-aurora-flow-composer.html">
+<div class="dnum">DESIGN 96</div>
+<div class="dname">Flow Composer</div>
+<div class="ddesc">Transactions, steps, think times, extractions, assertions.</div>
+<div class="open">Open design →</div></a><a class="dcard" href="97-midnight-aurora-results-analysis.html">
+<div class="dnum">DESIGN 97</div>
+<div class="dname">Results Analysis</div>
+<div class="ddesc">SLA verdicts, percentiles, hits/sec overlay, exports.</div>
+<div class="open">Open design →</div></a><a class="dcard" href="98-midnight-aurora-run-comparison.html">
+<div class="dnum">DESIGN 98</div>
+<div class="dname">Run Comparison</div>
+<div class="ddesc">A/B overlay charts, delta table, promotion verdict.</div>
+<div class="open">Open design →</div></a><a class="dcard" href="99-midnight-aurora-runner-fleet.html">
+<div class="dnum">DESIGN 99</div>
+<div class="dname">Runner Fleet</div>
+<div class="ddesc">K8s + Linux worker grid, queues, autoscale controls.</div>
+<div class="open">Open design →</div></a><a class="dcard" href="100-midnight-aurora-admin-audit.html">
+<div class="dnum">DESIGN 100</div>
+<div class="dname">Admin · Audit</div>
+<div class="ddesc">RBAC matrix, secrets vault, immutable audit trail.</div>
 <div class="open">Open design →</div></a></div></section>
-<div class="note"><b>How to choose:</b> compare the same screen across themes using this index, then shortlist 2–3. The winning direction gets rebuilt as a React + TypeScript component library (design tokens extracted straight from the chosen theme).</div>
+<div class="note"><b>How to choose:</b> Core suite covers the MVP workflow (define → run → monitor → history). Pro Suite adds the deep-dive tooling that paid platforms charge for — percentile analysis, SLA gates, baseline comparison, fleet ops, and compliance-grade auditing. Shortlist by comparing the same screen across themes here, then I'll rebuild the winner as a React + TypeScript component library with design tokens extracted automatically.</div>
 <script>
 document.querySelectorAll('.fc').forEach(function(b){b.addEventListener('click',function(){
 document.querySelectorAll('.fc').forEach(function(x){x.classList.remove('on')});b.classList.add('on');
-var f=b.dataset.f;document.querySelectorAll('.tsec').forEach(function(s){s.style.display=(f==='all'||s.dataset.mode===f)?'':'none';});});});
+var f=b.dataset.f;
+document.querySelectorAll('.tsec').forEach(function(s){
+var show=f==='all'||s.dataset.mode===f||(f==='suite-core'&&s.dataset.suite==='core')||(f==='suite-pro'&&s.dataset.suite==='pro');
+s.style.display=show?'':'none';});});});
 </script>
 </body></html>
