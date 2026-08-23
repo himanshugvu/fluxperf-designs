@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>FluxPerf — 50 UI Design Concepts</title><style>
+*{box-sizing:border-box;margin:0;padding:0}
+:root{--bg:#0b0d13;--sf:#12151f;--bd:#232838;--tx:#e8ecf7;--mut:#8a93ad}
+body{background:var(--bg);color:var(--tx);font-family:'Segoe UI',system-ui,sans-serif;line-height:1.5;padding:0 clamp(16px,4vw,56px) 80px}
+header.hero{padding:64px 0 30px;max-width:1100px}
+h1{font-size:clamp(1.9rem,4vw,3rem);font-weight:800;letter-spacing:-.02em}
+h1 em{font-style:normal;background:linear-gradient(90deg,#22d3ee,#a78bfa,#f472b6);-webkit-background-clip:text;background-clip:text;color:transparent}
+.sub{color:var(--mut);margin-top:12px;max-width:720px;font-size:1.02rem}
+.filters{display:flex;gap:8px;margin:26px 0 8px;flex-wrap:wrap}
+.fc{padding:8px 16px;border-radius:999px;border:1px solid var(--bd);background:var(--sf);color:var(--mut);font:inherit;font-size:.85rem;font-weight:600;cursor:pointer}
+.fc.on{color:#0b0d13;background:linear-gradient(90deg,#22d3ee,#a78bfa);border-color:transparent}
+.tsec{margin-top:44px}
+.thead{display:flex;align-items:baseline;gap:14px;flex-wrap:wrap;margin-bottom:16px}
+.thead h2{font-size:1.25rem}
+.swatches{display:flex;gap:5px}
+.swatches i{width:16px;height:16px;border-radius:5px;border:1px solid rgba(255,255,255,.15)}
+.mode{font-size:.72rem;letter-spacing:.1em;text-transform:uppercase;padding:3px 10px;border-radius:999px;border:1px solid var(--bd);color:var(--mut)}
+.tag{color:var(--mut);font-size:.88rem}
+.tgrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:14px}
+.dcard{display:block;background:var(--sf);border:1px solid var(--bd);border-radius:14px;padding:18px;color:var(--tx);text-decoration:none;transition:transform .15s ease,border-color .15s ease}
+.dcard:hover{transform:translateY(-3px);border-color:#3d4763;text-decoration:none}
+.dnum{color:var(--mut);font-size:.72rem;letter-spacing:.12em}
+.dname{font-weight:700;font-size:1.02rem;margin:6px 0 4px}
+.ddesc{color:var(--mut);font-size:.82rem;min-height:38px}
+.open{margin-top:12px;font-size:.8rem;font-weight:650;color:#67e8f9}
+.note{margin-top:56px;border:1px dashed var(--bd);border-radius:14px;padding:22px;color:var(--mut);font-size:.9rem;max-width:860px}
+</style></head><body>
+<header class="hero">
+<h1>FluxPerf · <em>50 UI Design Concepts</em></h1>
+<p class="sub">Ten visual themes × five core screens for the API performance-testing platform (scenarios, CSV data mapping, load profiles, k6 execution on K8s/Linux, SSE live monitoring, history and reports). Every file is fully self-contained — open any card below.</p>
+<div class="filters">
+<button class="fc on" data-f="all">All 50</button>
+<button class="fc" data-f="dark">Dark themes</button>
+<button class="fc" data-f="light">Light themes</button>
+</div>
+</header>
+<section class="tsec" data-mode="dark">
+<div class="thead"><h2>01 · Neon Pulse</h2><span class="mode">dark</span><span class="tag">Deep-space dark with cyan/violet neon glow</span><span class="swatches"><i style="background:#0a0e1a"></i><i style="background:#121a2e"></i><i style="background:#22d3ee"></i><i style="background:#a78bfa"></i><i style="background:#e7edff"></i></span></div>
+<div class="tgrid"><a class="dcard" href="01-neon-pulse-dashboard.html">
+<div class="dnum">DESIGN 01</div>
+<div class="dname">Dashboard</div>
+<div class="ddesc">KPI stats, throughput chart, target health, recent runs.</div>
+<div class="open">Open design →</div></a><a class="dcard" href="02-neon-pulse-live-run.html">
+<div class="dnum">DESIGN 02</div>
+<div class="dname">Live Run Monitor</div>
+<div class="ddesc">Streaming metrics, stage progress, thresholds, engine log.</div>
+<div class="open">Open design →</div></a><a class="dcard" href="03-neon-pulse-scenario-builder.html">
+<div class="dnum">DESIGN 03</div>
+<div class="dname">Scenario Builder</div>
+<div class="ddesc">Postman/cURL/JSON import, mapping, auth, preview.</div>
+<div class="open">Open design →</div></a><a class="dcard" href="04-neon-pulse-run-history.html">
+<div class="dnum">DESIGN 04</div>
+<div class="dname">Run History</div>
+<div class="ddesc">Filters, status chips, artifacts download, trends.</div>
+<div class="open">Open design →</div></a><a class="dcard" href="05-neon-pulse-load-profiles.html">
+<div class="dnum">DESIGN 05</div>
+<div class="dname">Load Profiles</div>
+<div class="ddesc">Stage builder, k6 options preview, executor settings.</div>
+<div class="open">Open design →</div></a></div></section><section class="tsec" data-mode="light">
+<div class="thead"><h2>02 · Enterprise Blue</h2><span class="mode">light</span><span class="tag">Clean corporate light theme, crisp borders</span><span class="swatches"><i style="background:#f4f6fb"></i><i style="background:#ffffff"></i><i style="background:#2563eb"></i><i style="background:#6366f1"></i><i style="background:#17203a"></i></span></div>
+<div class="tgrid"><a class="dcard" href="06-enterprise-blue-dashboard.html">
+<div class="dnum">DESIGN 06</div>
+<div class="dname">Dashboard</div>
+<div class="ddesc">KPI stats, throughput chart, target health, recent runs.</div>
+<div class="open">Open design →</div></a><a class="dcard" href="07-enterprise-blue-live-run.html">
+<div class="dnum">DESIGN 07</div>
+<div class="dname">Live Run Monitor</div>
+<div class="ddesc">Streaming metrics, stage progress, thresholds, engine log.</div>
+<div class="open">Open design →</div></a><a class="dcard" href="08-enterprise-blue-scenario-builder.html">
+<div class="dnum">DESIGN 08</div>
+<div class="dname">Scenario Builder</div>
+<div class="ddesc">Postman/cURL/JSON import, mapping, auth, preview.</div>
+<div class="open">Open design →</div></a><a class="dcard" href="09-enterprise-blue-run-history.html">
+<div class="dnum">DESIGN 09</div>
+<div class="dname">Run History</div>
+<div class="ddesc">Filters, status chips, artifacts download, trends.</div>
+<div class="open">Open design →</div></a><a class="dcard" href="10-enterprise-blue-load-profiles.html">
+<div class="dnum">DESIGN 10</div>
+<div class="dname">Load Profiles</div>
+<div class="ddesc">Stage builder, k6 options preview, executor settings.</div>
+<div class="open">Open design →</div></a></div></section><section class="tsec" data-mode="dark">
+<div class="thead"><h2>03 · Emerald Night</h2><span class="mode">dark</span><span class="tag">Slate dark with emerald accents, icon rail nav</span><span class="swatches"><i style="background:#0c131d"></i><i style="background:#111c29"></i><i style="background:#34d399"></i><i style="background:#2dd4bf"></i><i style="background:#e4f2ec"></i></span></div>
+<div class="tgrid"><a class="dcard" href="11-emerald-night-dashboard.html">
+<div class="dnum">DESIGN 11</div>
+<div class="dname">Dashboard</div>
+<div class="ddesc">KPI stats, throughput chart, target health, recent runs.</div>
+<div class="open">Open design →</div></a><a class="dcard" href="12-emerald-night-live-run.html">
+<div class="dnum">DESIGN 12</div>
+<div class="dname">Live Run Monitor</div>
+<div class="ddesc">Streaming metrics, stage progress, thresholds, engine log.</div>
+<div class="open">Open design →</div></a><a class="dcard" href="13-emerald-night-scenario-builder.html">
+<div class="dnum">DESIGN 13</div>
+<div class="dname">Scenario Builder</div>
+<div class="ddesc">Postman/cURL/JSON import, mapping, auth, preview.</div>
+<div class="open">Open design →</div></a><a class="dcard" href="14-emerald-night-run-history.html">
+<div class="dnum">DESIGN 14</div>
+<div class="dname">Run History</div>
+<div class="ddesc">Filters, status chips, artifacts download, trends.</div>
+<div class="open">Open design →</div></a><a class="dcard" href="15-emerald-night-load-profiles.html">
+<div class="dnum">DESIGN 15</div>
+<div class="dname">Load Profiles</div>
+<div class="ddesc">Stage builder, k6 options preview, executor settings.</div>
+<div class="open">Open design →</div></a></div></section><section class="tsec" data-mode="dark">
+<div class="thead"><h2>04 · Glass Violet</h2><span class="mode">dark</span><span class="tag">Frosted glassmorphism over a violet gradient</span><span class="swatches"><i style="background:#241d5e"></i><i style="background:#3b3480"></i><i style="background:#c4b5fd"></i><i style="background:#7dd3fc"></i><i style="background:#f0edff"></i></span></div>
+<div class="tgrid"><a class="dcard" href="16-glass-violet-dashboard.html">
+<div class="dnum">DESIGN 16</div>
+<div class="dname">Dashboard</div>
+<div class="ddesc">KPI stats, throughput chart, target health, recent runs.</div>
+<div class="open">Open design →</div></a><a class="dcard" href="17-glass-violet-live-run.html">
+<div class="dnum">DESIGN 17</div>
+<div class="dname">Live Run Monitor</div>
+<div class="ddesc">Streaming metrics, stage progress, thresholds, engine log.</div>
+<div class="open">Open design →</div></a><a class="dcard" href="18-glass-violet-scenario-builder.html">
+<div class="dnum">DESIGN 18</div>
+<div class="dname">Scenario Builder</div>
+<div class="ddesc">Postman/cURL/JSON import, mapping, auth, preview.</div>
+<div class="open">Open design →</div></a><a class="dcard" href="19-glass-violet-run-history.html">
+<div class="dnum">DESIGN 19</div>
+<div class="dname">Run History</div>
+<div class="ddesc">Filters, status chips, artifacts download, trends.</div>
+<div class="open">Open design →</div></a><a class="dcard" href="20-glass-violet-load-profiles.html">
+<div class="dnum">DESIGN 20</div>
+<div class="dname">Load Profiles</div>
+<div class="ddesc">Stage builder, k6 options preview, executor settings.</div>
+<div class="open">Open design →</div></a></div></section><section class="tsec" data-mode="light">
+<div class="thead"><h2>05 · Brutal Mono</h2><span class="mode">light</span><span class="tag">Neo-brutalist: hard shadows, black rules, yellow pop</span><span class="swatches"><i style="background:#fffdf3"></i><i style="background:#ffffff"></i><i style="background:#ffd60a"></i><i style="background:#111111"></i><i style="background:#101010"></i></span></div>
+<div class="tgrid"><a class="dcard" href="21-brutal-mono-dashboard.html">
+<div class="dnum">DESIGN 21</div>
+<div class="dname">Dashboard</div>
+<div class="ddesc">KPI stats, throughput chart, target health, recent runs.</div>
+<div class="open">Open design →</div></a><a class="dcard" href="22-brutal-mono-live-run.html">
+<div class="dnum">DESIGN 22</div>
+<div class="dname">Live Run Monitor</div>
+<div class="ddesc">Streaming metrics, stage progress, thresholds, engine log.</div>
+<div class="open">Open design →</div></a><a class="dcard" href="23-brutal-mono-scenario-builder.html">
+<div class="dnum">DESIGN 23</div>
+<div class="dname">Scenario Builder</div>
+<div class="ddesc">Postman/cURL/JSON import, mapping, auth, preview.</div>
+<div class="open">Open design →</div></a><a class="dcard" href="24-brutal-mono-run-history.html">
+<div class="dnum">DESIGN 24</div>
+<div class="dname">Run History</div>
+<div class="ddesc">Filters, status chips, artifacts download, trends.</div>
+<div class="open">Open design →</div></a><a class="dcard" href="25-brutal-mono-load-profiles.html">
+<div class="dnum">DESIGN 25</div>
+<div class="dname">Load Profiles</div>
+<div class="ddesc">Stage builder, k6 options preview, executor settings.</div>
+<div class="open">Open design →</div></a></div></section><section class="tsec" data-mode="light">
+<div class="thead"><h2>06 · Pastel Cloud</h2><span class="mode">light</span><span class="tag">Soft lavender/peach pastels, pill shapes, friendly</span><span class="swatches"><i style="background:#faf8ff"></i><i style="background:#ffffff"></i><i style="background:#8b5cf6"></i><i style="background:#fb923c"></i><i style="background:#3d3564"></i></span></div>
+<div class="tgrid"><a class="dcard" href="26-pastel-cloud-dashboard.html">
+<div class="dnum">DESIGN 26</div>
+<div class="dname">Dashboard</div>
+<div class="ddesc">KPI stats, throughput chart, target health, recent runs.</div>
+<div class="open">Open design →</div></a><a class="dcard" href="27-pastel-cloud-live-run.html">
+<div class="dnum">DESIGN 27</div>
+<div class="dname">Live Run Monitor</div>
+<div class="ddesc">Streaming metrics, stage progress, thresholds, engine log.</div>
+<div class="open">Open design →</div></a><a class="dcard" href="28-pastel-cloud-scenario-builder.html">
+<div class="dnum">DESIGN 28</div>
+<div class="dname">Scenario Builder</div>
+<div class="ddesc">Postman/cURL/JSON import, mapping, auth, preview.</div>
+<div class="open">Open design →</div></a><a class="dcard" href="29-pastel-cloud-run-history.html">
+<div class="dnum">DESIGN 29</div>
+<div class="dname">Run History</div>
+<div class="ddesc">Filters, status chips, artifacts download, trends.</div>
+<div class="open">Open design →</div></a><a class="dcard" href="30-pastel-cloud-load-profiles.html">
+<div class="dnum">DESIGN 30</div>
+<div class="dname">Load Profiles</div>
+<div class="ddesc">Stage builder, k6 options preview, executor settings.</div>
+<div class="open">Open design →</div></a></div></section><section class="tsec" data-mode="dark">
+<div class="thead"><h2>07 · Terminal Green</h2><span class="mode">dark</span><span class="tag">Full monospace hacker terminal on pure black</span><span class="swatches"><i style="background:#050805"></i><i style="background:#0a120a"></i><i style="background:#22c55e"></i><i style="background:#86efac"></i><i style="background:#b8f5c4"></i></span></div>
+<div class="tgrid"><a class="dcard" href="31-terminal-green-dashboard.html">
+<div class="dnum">DESIGN 31</div>
+<div class="dname">Dashboard</div>
+<div class="ddesc">KPI stats, throughput chart, target health, recent runs.</div>
+<div class="open">Open design →</div></a><a class="dcard" href="32-terminal-green-live-run.html">
+<div class="dnum">DESIGN 32</div>
+<div class="dname">Live Run Monitor</div>
+<div class="ddesc">Streaming metrics, stage progress, thresholds, engine log.</div>
+<div class="open">Open design →</div></a><a class="dcard" href="33-terminal-green-scenario-builder.html">
+<div class="dnum">DESIGN 33</div>
+<div class="dname">Scenario Builder</div>
+<div class="ddesc">Postman/cURL/JSON import, mapping, auth, preview.</div>
+<div class="open">Open design →</div></a><a class="dcard" href="34-terminal-green-run-history.html">
+<div class="dnum">DESIGN 34</div>
+<div class="dname">Run History</div>
+<div class="ddesc">Filters, status chips, artifacts download, trends.</div>
+<div class="open">Open design →</div></a><a class="dcard" href="35-terminal-green-load-profiles.html">
+<div class="dnum">DESIGN 35</div>
+<div class="dname">Load Profiles</div>
+<div class="ddesc">Stage builder, k6 options preview, executor settings.</div>
+<div class="open">Open design →</div></a></div></section><section class="tsec" data-mode="light">
+<div class="thead"><h2>08 · Crimson Ink</h2><span class="mode">light</span><span class="tag">Editorial paper-white with serif heads and red ink</span><span class="swatches"><i style="background:#fbfaf7"></i><i style="background:#ffffff"></i><i style="background:#dc2626"></i><i style="background:#1d4ed8"></i><i style="background:#191713"></i></span></div>
+<div class="tgrid"><a class="dcard" href="36-crimson-ink-dashboard.html">
+<div class="dnum">DESIGN 36</div>
+<div class="dname">Dashboard</div>
+<div class="ddesc">KPI stats, throughput chart, target health, recent runs.</div>
+<div class="open">Open design →</div></a><a class="dcard" href="37-crimson-ink-live-run.html">
+<div class="dnum">DESIGN 37</div>
+<div class="dname">Live Run Monitor</div>
+<div class="ddesc">Streaming metrics, stage progress, thresholds, engine log.</div>
+<div class="open">Open design →</div></a><a class="dcard" href="38-crimson-ink-scenario-builder.html">
+<div class="dnum">DESIGN 38</div>
+<div class="dname">Scenario Builder</div>
+<div class="ddesc">Postman/cURL/JSON import, mapping, auth, preview.</div>
+<div class="open">Open design →</div></a><a class="dcard" href="39-crimson-ink-run-history.html">
+<div class="dnum">DESIGN 39</div>
+<div class="dname">Run History</div>
+<div class="ddesc">Filters, status chips, artifacts download, trends.</div>
+<div class="open">Open design →</div></a><a class="dcard" href="40-crimson-ink-load-profiles.html">
+<div class="dnum">DESIGN 40</div>
+<div class="dname">Load Profiles</div>
+<div class="ddesc">Stage builder, k6 options preview, executor settings.</div>
+<div class="open">Open design →</div></a></div></section><section class="tsec" data-mode="dark">
+<div class="thead"><h2>09 · Solar Flare</h2><span class="mode">dark</span><span class="tag">Warm charcoal with molten orange gradients</span><span class="swatches"><i style="background:#161210"></i><i style="background:#211a15"></i><i style="background:#f97316"></i><i style="background:#fbbf24"></i><i style="background:#fdf3e7"></i></span></div>
+<div class="tgrid"><a class="dcard" href="41-solar-flare-dashboard.html">
+<div class="dnum">DESIGN 41</div>
+<div class="dname">Dashboard</div>
+<div class="ddesc">KPI stats, throughput chart, target health, recent runs.</div>
+<div class="open">Open design →</div></a><a class="dcard" href="42-solar-flare-live-run.html">
+<div class="dnum">DESIGN 42</div>
+<div class="dname">Live Run Monitor</div>
+<div class="ddesc">Streaming metrics, stage progress, thresholds, engine log.</div>
+<div class="open">Open design →</div></a><a class="dcard" href="43-solar-flare-scenario-builder.html">
+<div class="dnum">DESIGN 43</div>
+<div class="dname">Scenario Builder</div>
+<div class="ddesc">Postman/cURL/JSON import, mapping, auth, preview.</div>
+<div class="open">Open design →</div></a><a class="dcard" href="44-solar-flare-run-history.html">
+<div class="dnum">DESIGN 44</div>
+<div class="dname">Run History</div>
+<div class="ddesc">Filters, status chips, artifacts download, trends.</div>
+<div class="open">Open design →</div></a><a class="dcard" href="45-solar-flare-load-profiles.html">
+<div class="dnum">DESIGN 45</div>
+<div class="dname">Load Profiles</div>
+<div class="ddesc">Stage builder, k6 options preview, executor settings.</div>
+<div class="open">Open design →</div></a></div></section><section class="tsec" data-mode="light">
+<div class="thead"><h2>10 · Arctic Teal</h2><span class="mode">light</span><span class="tag">Cool SaaS light theme, teal + navy, subtle grid backdrop</span><span class="swatches"><i style="background:#eef6f6"></i><i style="background:#ffffff"></i><i style="background:#0d9488"></i><i style="background:#155e93"></i><i style="background:#12333a"></i></span></div>
+<div class="tgrid"><a class="dcard" href="46-arctic-teal-dashboard.html">
+<div class="dnum">DESIGN 46</div>
+<div class="dname">Dashboard</div>
+<div class="ddesc">KPI stats, throughput chart, target health, recent runs.</div>
+<div class="open">Open design →</div></a><a class="dcard" href="47-arctic-teal-live-run.html">
+<div class="dnum">DESIGN 47</div>
+<div class="dname">Live Run Monitor</div>
+<div class="ddesc">Streaming metrics, stage progress, thresholds, engine log.</div>
+<div class="open">Open design →</div></a><a class="dcard" href="48-arctic-teal-scenario-builder.html">
+<div class="dnum">DESIGN 48</div>
+<div class="dname">Scenario Builder</div>
+<div class="ddesc">Postman/cURL/JSON import, mapping, auth, preview.</div>
+<div class="open">Open design →</div></a><a class="dcard" href="49-arctic-teal-run-history.html">
+<div class="dnum">DESIGN 49</div>
+<div class="dname">Run History</div>
+<div class="ddesc">Filters, status chips, artifacts download, trends.</div>
+<div class="open">Open design →</div></a><a class="dcard" href="50-arctic-teal-load-profiles.html">
+<div class="dnum">DESIGN 50</div>
+<div class="dname">Load Profiles</div>
+<div class="ddesc">Stage builder, k6 options preview, executor settings.</div>
+<div class="open">Open design →</div></a></div></section>
+<div class="note"><b>How to choose:</b> compare the same screen across themes using this index, then shortlist 2–3. The winning direction gets rebuilt as a React + TypeScript component library (design tokens extracted straight from the chosen theme).</div>
+<script>
+document.querySelectorAll('.fc').forEach(function(b){b.addEventListener('click',function(){
+document.querySelectorAll('.fc').forEach(function(x){x.classList.remove('on')});b.classList.add('on');
+var f=b.dataset.f;document.querySelectorAll('.tsec').forEach(function(s){s.style.display=(f==='all'||s.dataset.mode===f)?'':'none';});});});
+</script>
+</body></html>
