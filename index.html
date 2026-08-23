@@ -29,20 +29,63 @@ h1 em{font-style:normal;background:linear-gradient(90deg,#22d3ee,#a78bfa,#f472b6
 
 .genhead{margin:56px 0 6px;font-size:1.05rem;letter-spacing:.02em;color:#c9d2ea}
 .gentag{font-size:.78rem;color:#7c88a8;font-weight:500;margin-left:10px;letter-spacing:.08em;text-transform:uppercase;border:1px solid var(--bd);border-radius:999px;padding:3px 12px}
+.nb{font-size:.72rem;letter-spacing:.08em;text-transform:uppercase;padding:3px 10px;border-radius:999px;border:1px solid #2c4a5e;color:#67d3f3;background:rgba(103,211,243,.08)}
+.nb.top{border-color:#4a3d6e;color:#c4a8f5;background:rgba(196,168,245,.08)}
+.picks{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:14px;margin-top:16px}
+.pick{display:flex;flex-direction:column;gap:8px;background:linear-gradient(145deg,#141a2b,#10131e);border:1px solid #2b3550;border-radius:16px;padding:20px;color:var(--tx);text-decoration:none;transition:transform .15s ease,border-color .15s ease}
+.pick:hover{transform:translateY(-3px);border-color:#67e8f9;text-decoration:none}
+.rank{align-self:flex-start;font-weight:800;font-size:.8rem;letter-spacing:.06em;padding:4px 12px;border-radius:999px;background:linear-gradient(90deg,#22d3ee,#a78bfa);color:#0b0d13}
+.pname{font-weight:750;font-size:1.08rem}
+.pname small{color:var(--mut);font-weight:500;font-size:.76rem;margin-left:8px;letter-spacing:.05em}
+.pwhy{color:var(--mut);font-size:.85rem;line-height:1.55}
+.navstats{margin-top:18px;display:flex;gap:10px;flex-wrap:wrap}
+.nstat{display:inline-flex;align-items:center;gap:8px;border:1px solid var(--bd);background:var(--sf);border-radius:999px;padding:7px 15px;font-size:.82rem;color:var(--mut)}
+.nstat b{color:var(--tx)}
 </style></head><body>
 <header class="hero">
 <h1>FluxPerf · <em>100 UI Design Concepts</em></h1>
 <p class="sub">Twenty visual themes covering ten screens for an enterprise API performance-testing platform on k6 OSS — scenarios & CSV data mapping, load profiles, K8s/Linux execution, SSE live monitoring, LoadRunner-style results analysis & SLA reporting, A/B run comparison, transaction flow composer, runner fleet management, and RBAC with full audit trail. Every file is fully self-contained.</p>
-<div class="filters">
+<div class="navstats">
+<span class="nstat"><b>65</b> left-menu designs (45 sidebar + 20 icon rail)</span>
+<span class="nstat"><b>35</b> top-menu designs</span>
+<span class="nstat"><b>50</b> dark · <b>50</b> light</span>
+</div>
+<h2 class="genhead">Editor's Top 5 <span class="gentag">one click to the flagship screen</span></h2>
+<div class="picks">
+<a class="pick" href="67-deep-ocean-results-analysis.html">
+<span class="rank">#1</span>
+<div class="pname">Deep Ocean <small>designs 66–70</small></div>
+<div class="pwhy">Fintech navy + sky blue. Stunning analysis screens, dark UI made for long monitoring sessions.</div>
+</a><a class="pick" href="92-porcelain-blue-results-analysis.html">
+<span class="rank">#2</span>
+<div class="pname">Porcelain Blue <small>designs 91–95</small></div>
+<div class="pwhy">Data-dense trading-desk light UI. Best tables for audit, SLA reports and run history.</div>
+</a><a class="pick" href="02-neon-pulse-live-run.html">
+<span class="rank">#3</span>
+<div class="pname">Neon Pulse <small>designs 01–05</small></div>
+<div class="pwhy">Flagship modern SaaS look. The live monitor with glowing metrics is the best single screen here.</div>
+</a><a class="pick" href="74-carbon-fiber-runner-fleet.html">
+<span class="rank">#4</span>
+<div class="pname">Carbon Fiber <small>designs 71–75</small></div>
+<div class="pwhy">Industrial graphite with mono heads. Reads like serious infra tooling; great fleet screens.</div>
+</a><a class="pick" href="08-enterprise-blue-scenario-builder.html">
+<span class="rank">#5</span>
+<div class="pname">Enterprise Blue <small>designs 06–10</small></div>
+<div class="pwhy">The safe corporate classic. Zero-risk choice; cleanest forms for scenario building.</div>
+</a>
+</div>
+<div class="filters" style="margin-top:40px">
 <button class="fc on" data-f="all">All 100</button>
 <button class="fc" data-f="dark">Dark themes</button>
 <button class="fc" data-f="light">Light themes</button>
 <button class="fc" data-f="suite-core">Core suite (01–50)</button>
 <button class="fc" data-f="suite-pro">Pro suite (51–100)</button>
+<button class="fc" data-f="nav-left">Left menu</button>
+<button class="fc" data-f="nav-top">Top menu</button>
 </div>
 </header>
-<h2 class="genhead">Generation 1 — Core Suite · designs 01–50 <span class="gentag">define · run · monitor</span></h2><section class="tsec" data-mode="dark" data-suite="core">
-<div class="thead"><h2>01–05 · Neon Pulse</h2><span class="mode">dark</span><span class="tag">Deep-space dark with cyan/violet neon glow</span><span class="swatches"><i style="background:#0a0e1a"></i><i style="background:#121a2e"></i><i style="background:#22d3ee"></i><i style="background:#a78bfa"></i><i style="background:#e7edff"></i></span></div>
+<h2 class="genhead">Generation 1 — Core Suite · designs 01–50 <span class="gentag">define · run · monitor</span></h2><section class="tsec" id="theme-neon-pulse" data-mode="dark" data-suite="core" data-nav="sidebar">
+<div class="thead"><h2>01–05 · Neon Pulse</h2><span class="nb sidebar">Left menu</span><span class="mode">dark</span><span class="tag">Deep-space dark with cyan/violet neon glow</span><span class="swatches"><i style="background:#0a0e1a"></i><i style="background:#121a2e"></i><i style="background:#22d3ee"></i><i style="background:#a78bfa"></i><i style="background:#e7edff"></i></span></div>
 <div class="tgrid"><a class="dcard" href="01-neon-pulse-dashboard.html">
 <div class="dnum">DESIGN 01</div>
 <div class="dname">Dashboard</div>
@@ -63,8 +106,8 @@ h1 em{font-style:normal;background:linear-gradient(90deg,#22d3ee,#a78bfa,#f472b6
 <div class="dnum">DESIGN 05</div>
 <div class="dname">Load Profiles</div>
 <div class="ddesc">Stage builder, k6 options preview, executor settings.</div>
-<div class="open">Open design →</div></a></div></section><section class="tsec" data-mode="light" data-suite="core">
-<div class="thead"><h2>06–10 · Enterprise Blue</h2><span class="mode">light</span><span class="tag">Clean corporate light theme, crisp borders</span><span class="swatches"><i style="background:#f4f6fb"></i><i style="background:#ffffff"></i><i style="background:#2563eb"></i><i style="background:#6366f1"></i><i style="background:#17203a"></i></span></div>
+<div class="open">Open design →</div></a></div></section><section class="tsec" id="theme-enterprise-blue" data-mode="light" data-suite="core" data-nav="sidebar">
+<div class="thead"><h2>06–10 · Enterprise Blue</h2><span class="nb sidebar">Left menu</span><span class="mode">light</span><span class="tag">Clean corporate light theme, crisp borders</span><span class="swatches"><i style="background:#f4f6fb"></i><i style="background:#ffffff"></i><i style="background:#2563eb"></i><i style="background:#6366f1"></i><i style="background:#17203a"></i></span></div>
 <div class="tgrid"><a class="dcard" href="06-enterprise-blue-dashboard.html">
 <div class="dnum">DESIGN 06</div>
 <div class="dname">Dashboard</div>
@@ -85,8 +128,8 @@ h1 em{font-style:normal;background:linear-gradient(90deg,#22d3ee,#a78bfa,#f472b6
 <div class="dnum">DESIGN 10</div>
 <div class="dname">Load Profiles</div>
 <div class="ddesc">Stage builder, k6 options preview, executor settings.</div>
-<div class="open">Open design →</div></a></div></section><section class="tsec" data-mode="dark" data-suite="core">
-<div class="thead"><h2>11–15 · Emerald Night</h2><span class="mode">dark</span><span class="tag">Slate dark with emerald accents, icon rail nav</span><span class="swatches"><i style="background:#0c131d"></i><i style="background:#111c29"></i><i style="background:#34d399"></i><i style="background:#2dd4bf"></i><i style="background:#e4f2ec"></i></span></div>
+<div class="open">Open design →</div></a></div></section><section class="tsec" id="theme-emerald-night" data-mode="dark" data-suite="core" data-nav="rail">
+<div class="thead"><h2>11–15 · Emerald Night</h2><span class="nb rail">Left icon rail</span><span class="mode">dark</span><span class="tag">Slate dark with emerald accents, icon rail nav</span><span class="swatches"><i style="background:#0c131d"></i><i style="background:#111c29"></i><i style="background:#34d399"></i><i style="background:#2dd4bf"></i><i style="background:#e4f2ec"></i></span></div>
 <div class="tgrid"><a class="dcard" href="11-emerald-night-dashboard.html">
 <div class="dnum">DESIGN 11</div>
 <div class="dname">Dashboard</div>
@@ -107,8 +150,8 @@ h1 em{font-style:normal;background:linear-gradient(90deg,#22d3ee,#a78bfa,#f472b6
 <div class="dnum">DESIGN 15</div>
 <div class="dname">Load Profiles</div>
 <div class="ddesc">Stage builder, k6 options preview, executor settings.</div>
-<div class="open">Open design →</div></a></div></section><section class="tsec" data-mode="dark" data-suite="core">
-<div class="thead"><h2>16–20 · Glass Violet</h2><span class="mode">dark</span><span class="tag">Frosted glassmorphism over a violet gradient</span><span class="swatches"><i style="background:#241d5e"></i><i style="background:#3b3480"></i><i style="background:#c4b5fd"></i><i style="background:#7dd3fc"></i><i style="background:#f0edff"></i></span></div>
+<div class="open">Open design →</div></a></div></section><section class="tsec" id="theme-glass-violet" data-mode="dark" data-suite="core" data-nav="top">
+<div class="thead"><h2>16–20 · Glass Violet</h2><span class="nb top">Top menu</span><span class="mode">dark</span><span class="tag">Frosted glassmorphism over a violet gradient</span><span class="swatches"><i style="background:#241d5e"></i><i style="background:#3b3480"></i><i style="background:#c4b5fd"></i><i style="background:#7dd3fc"></i><i style="background:#f0edff"></i></span></div>
 <div class="tgrid"><a class="dcard" href="16-glass-violet-dashboard.html">
 <div class="dnum">DESIGN 16</div>
 <div class="dname">Dashboard</div>
@@ -129,8 +172,8 @@ h1 em{font-style:normal;background:linear-gradient(90deg,#22d3ee,#a78bfa,#f472b6
 <div class="dnum">DESIGN 20</div>
 <div class="dname">Load Profiles</div>
 <div class="ddesc">Stage builder, k6 options preview, executor settings.</div>
-<div class="open">Open design →</div></a></div></section><section class="tsec" data-mode="light" data-suite="core">
-<div class="thead"><h2>21–25 · Brutal Mono</h2><span class="mode">light</span><span class="tag">Neo-brutalist: hard shadows, black rules, yellow pop</span><span class="swatches"><i style="background:#fffdf3"></i><i style="background:#ffffff"></i><i style="background:#ffd60a"></i><i style="background:#111111"></i><i style="background:#101010"></i></span></div>
+<div class="open">Open design →</div></a></div></section><section class="tsec" id="theme-brutal-mono" data-mode="light" data-suite="core" data-nav="sidebar">
+<div class="thead"><h2>21–25 · Brutal Mono</h2><span class="nb sidebar">Left menu</span><span class="mode">light</span><span class="tag">Neo-brutalist: hard shadows, black rules, yellow pop</span><span class="swatches"><i style="background:#fffdf3"></i><i style="background:#ffffff"></i><i style="background:#ffd60a"></i><i style="background:#111111"></i><i style="background:#101010"></i></span></div>
 <div class="tgrid"><a class="dcard" href="21-brutal-mono-dashboard.html">
 <div class="dnum">DESIGN 21</div>
 <div class="dname">Dashboard</div>
@@ -151,8 +194,8 @@ h1 em{font-style:normal;background:linear-gradient(90deg,#22d3ee,#a78bfa,#f472b6
 <div class="dnum">DESIGN 25</div>
 <div class="dname">Load Profiles</div>
 <div class="ddesc">Stage builder, k6 options preview, executor settings.</div>
-<div class="open">Open design →</div></a></div></section><section class="tsec" data-mode="light" data-suite="core">
-<div class="thead"><h2>26–30 · Pastel Cloud</h2><span class="mode">light</span><span class="tag">Soft lavender/peach pastels, pill shapes, friendly</span><span class="swatches"><i style="background:#faf8ff"></i><i style="background:#ffffff"></i><i style="background:#8b5cf6"></i><i style="background:#fb923c"></i><i style="background:#3d3564"></i></span></div>
+<div class="open">Open design →</div></a></div></section><section class="tsec" id="theme-pastel-cloud" data-mode="light" data-suite="core" data-nav="rail">
+<div class="thead"><h2>26–30 · Pastel Cloud</h2><span class="nb rail">Left icon rail</span><span class="mode">light</span><span class="tag">Soft lavender/peach pastels, pill shapes, friendly</span><span class="swatches"><i style="background:#faf8ff"></i><i style="background:#ffffff"></i><i style="background:#8b5cf6"></i><i style="background:#fb923c"></i><i style="background:#3d3564"></i></span></div>
 <div class="tgrid"><a class="dcard" href="26-pastel-cloud-dashboard.html">
 <div class="dnum">DESIGN 26</div>
 <div class="dname">Dashboard</div>
@@ -173,8 +216,8 @@ h1 em{font-style:normal;background:linear-gradient(90deg,#22d3ee,#a78bfa,#f472b6
 <div class="dnum">DESIGN 30</div>
 <div class="dname">Load Profiles</div>
 <div class="ddesc">Stage builder, k6 options preview, executor settings.</div>
-<div class="open">Open design →</div></a></div></section><section class="tsec" data-mode="dark" data-suite="core">
-<div class="thead"><h2>31–35 · Terminal Green</h2><span class="mode">dark</span><span class="tag">Full monospace hacker terminal on pure black</span><span class="swatches"><i style="background:#050805"></i><i style="background:#0a120a"></i><i style="background:#22c55e"></i><i style="background:#86efac"></i><i style="background:#b8f5c4"></i></span></div>
+<div class="open">Open design →</div></a></div></section><section class="tsec" id="theme-terminal-green" data-mode="dark" data-suite="core" data-nav="sidebar">
+<div class="thead"><h2>31–35 · Terminal Green</h2><span class="nb sidebar">Left menu</span><span class="mode">dark</span><span class="tag">Full monospace hacker terminal on pure black</span><span class="swatches"><i style="background:#050805"></i><i style="background:#0a120a"></i><i style="background:#22c55e"></i><i style="background:#86efac"></i><i style="background:#b8f5c4"></i></span></div>
 <div class="tgrid"><a class="dcard" href="31-terminal-green-dashboard.html">
 <div class="dnum">DESIGN 31</div>
 <div class="dname">Dashboard</div>
@@ -195,8 +238,8 @@ h1 em{font-style:normal;background:linear-gradient(90deg,#22d3ee,#a78bfa,#f472b6
 <div class="dnum">DESIGN 35</div>
 <div class="dname">Load Profiles</div>
 <div class="ddesc">Stage builder, k6 options preview, executor settings.</div>
-<div class="open">Open design →</div></a></div></section><section class="tsec" data-mode="light" data-suite="core">
-<div class="thead"><h2>36–40 · Crimson Ink</h2><span class="mode">light</span><span class="tag">Editorial paper-white with serif heads and red ink</span><span class="swatches"><i style="background:#fbfaf7"></i><i style="background:#ffffff"></i><i style="background:#dc2626"></i><i style="background:#1d4ed8"></i><i style="background:#191713"></i></span></div>
+<div class="open">Open design →</div></a></div></section><section class="tsec" id="theme-crimson-ink" data-mode="light" data-suite="core" data-nav="top">
+<div class="thead"><h2>36–40 · Crimson Ink</h2><span class="nb top">Top menu</span><span class="mode">light</span><span class="tag">Editorial paper-white with serif heads and red ink</span><span class="swatches"><i style="background:#fbfaf7"></i><i style="background:#ffffff"></i><i style="background:#dc2626"></i><i style="background:#1d4ed8"></i><i style="background:#191713"></i></span></div>
 <div class="tgrid"><a class="dcard" href="36-crimson-ink-dashboard.html">
 <div class="dnum">DESIGN 36</div>
 <div class="dname">Dashboard</div>
@@ -217,8 +260,8 @@ h1 em{font-style:normal;background:linear-gradient(90deg,#22d3ee,#a78bfa,#f472b6
 <div class="dnum">DESIGN 40</div>
 <div class="dname">Load Profiles</div>
 <div class="ddesc">Stage builder, k6 options preview, executor settings.</div>
-<div class="open">Open design →</div></a></div></section><section class="tsec" data-mode="dark" data-suite="core">
-<div class="thead"><h2>41–45 · Solar Flare</h2><span class="mode">dark</span><span class="tag">Warm charcoal with molten orange gradients</span><span class="swatches"><i style="background:#161210"></i><i style="background:#211a15"></i><i style="background:#f97316"></i><i style="background:#fbbf24"></i><i style="background:#fdf3e7"></i></span></div>
+<div class="open">Open design →</div></a></div></section><section class="tsec" id="theme-solar-flare" data-mode="dark" data-suite="core" data-nav="top">
+<div class="thead"><h2>41–45 · Solar Flare</h2><span class="nb top">Top menu</span><span class="mode">dark</span><span class="tag">Warm charcoal with molten orange gradients</span><span class="swatches"><i style="background:#161210"></i><i style="background:#211a15"></i><i style="background:#f97316"></i><i style="background:#fbbf24"></i><i style="background:#fdf3e7"></i></span></div>
 <div class="tgrid"><a class="dcard" href="41-solar-flare-dashboard.html">
 <div class="dnum">DESIGN 41</div>
 <div class="dname">Dashboard</div>
@@ -239,8 +282,8 @@ h1 em{font-style:normal;background:linear-gradient(90deg,#22d3ee,#a78bfa,#f472b6
 <div class="dnum">DESIGN 45</div>
 <div class="dname">Load Profiles</div>
 <div class="ddesc">Stage builder, k6 options preview, executor settings.</div>
-<div class="open">Open design →</div></a></div></section><section class="tsec" data-mode="light" data-suite="core">
-<div class="thead"><h2>46–50 · Arctic Teal</h2><span class="mode">light</span><span class="tag">Cool SaaS light theme, teal + navy, subtle grid backdrop</span><span class="swatches"><i style="background:#eef6f6"></i><i style="background:#ffffff"></i><i style="background:#0d9488"></i><i style="background:#155e93"></i><i style="background:#12333a"></i></span></div>
+<div class="open">Open design →</div></a></div></section><section class="tsec" id="theme-arctic-teal" data-mode="light" data-suite="core" data-nav="sidebar">
+<div class="thead"><h2>46–50 · Arctic Teal</h2><span class="nb sidebar">Left menu</span><span class="mode">light</span><span class="tag">Cool SaaS light theme, teal + navy, subtle grid backdrop</span><span class="swatches"><i style="background:#eef6f6"></i><i style="background:#ffffff"></i><i style="background:#0d9488"></i><i style="background:#155e93"></i><i style="background:#12333a"></i></span></div>
 <div class="tgrid"><a class="dcard" href="46-arctic-teal-dashboard.html">
 <div class="dnum">DESIGN 46</div>
 <div class="dname">Dashboard</div>
@@ -261,8 +304,8 @@ h1 em{font-style:normal;background:linear-gradient(90deg,#22d3ee,#a78bfa,#f472b6
 <div class="dnum">DESIGN 50</div>
 <div class="dname">Load Profiles</div>
 <div class="ddesc">Stage builder, k6 options preview, executor settings.</div>
-<div class="open">Open design →</div></a></div></section><h2 class="genhead">Generation 2 — Pro Suite · designs 51–100 <span class="gentag">LoadRunner · NeoLoad · BlazeMeter-grade workflows</span></h2><section class="tsec" data-mode="dark" data-suite="pro">
-<div class="thead"><h2>51–55 · Obsidian Gold</h2><span class="mode">dark</span><span class="tag">Luxury near-black with brushed gold accents</span><span class="swatches"><i style="background:#0c0b09"></i><i style="background:#161310"></i><i style="background:#d4af37"></i><i style="background:#b08d2e"></i><i style="background:#f3ead8"></i></span></div>
+<div class="open">Open design →</div></a></div></section><h2 class="genhead">Generation 2 — Pro Suite · designs 51–100 <span class="gentag">LoadRunner · NeoLoad · BlazeMeter-grade workflows</span></h2><section class="tsec" id="theme-obsidian-gold" data-mode="dark" data-suite="pro" data-nav="top">
+<div class="thead"><h2>51–55 · Obsidian Gold</h2><span class="nb top">Top menu</span><span class="mode">dark</span><span class="tag">Luxury near-black with brushed gold accents</span><span class="swatches"><i style="background:#0c0b09"></i><i style="background:#161310"></i><i style="background:#d4af37"></i><i style="background:#b08d2e"></i><i style="background:#f3ead8"></i></span></div>
 <div class="tgrid"><a class="dcard" href="51-obsidian-gold-flow-composer.html">
 <div class="dnum">DESIGN 51</div>
 <div class="dname">Flow Composer</div>
@@ -283,8 +326,8 @@ h1 em{font-style:normal;background:linear-gradient(90deg,#22d3ee,#a78bfa,#f472b6
 <div class="dnum">DESIGN 55</div>
 <div class="dname">Admin · Audit</div>
 <div class="ddesc">RBAC matrix, secrets vault, immutable audit trail.</div>
-<div class="open">Open design →</div></a></div></section><section class="tsec" data-mode="dark" data-suite="pro">
-<div class="thead"><h2>56–60 · Cyber Lime</h2><span class="mode">dark</span><span class="tag">Graphite tech-dark charged with electric lime</span><span class="swatches"><i style="background:#0e1210"></i><i style="background:#141a15"></i><i style="background:#a3e635"></i><i style="background:#34d399"></i><i style="background:#eaf5df"></i></span></div>
+<div class="open">Open design →</div></a></div></section><section class="tsec" id="theme-cyber-lime" data-mode="dark" data-suite="pro" data-nav="rail">
+<div class="thead"><h2>56–60 · Cyber Lime</h2><span class="nb rail">Left icon rail</span><span class="mode">dark</span><span class="tag">Graphite tech-dark charged with electric lime</span><span class="swatches"><i style="background:#0e1210"></i><i style="background:#141a15"></i><i style="background:#a3e635"></i><i style="background:#34d399"></i><i style="background:#eaf5df"></i></span></div>
 <div class="tgrid"><a class="dcard" href="56-cyber-lime-flow-composer.html">
 <div class="dnum">DESIGN 56</div>
 <div class="dname">Flow Composer</div>
@@ -305,8 +348,8 @@ h1 em{font-style:normal;background:linear-gradient(90deg,#22d3ee,#a78bfa,#f472b6
 <div class="dnum">DESIGN 60</div>
 <div class="dname">Admin · Audit</div>
 <div class="ddesc">RBAC matrix, secrets vault, immutable audit trail.</div>
-<div class="open">Open design →</div></a></div></section><section class="tsec" data-mode="light" data-suite="pro">
-<div class="thead"><h2>61–65 · Rose Quartz</h2><span class="mode">light</span><span class="tag">Blush-pink light UI, soft and modern</span><span class="swatches"><i style="background:#fdf3f6"></i><i style="background:#ffffff"></i><i style="background:#db2777"></i><i style="background:#9333ea"></i><i style="background:#472b3f"></i></span></div>
+<div class="open">Open design →</div></a></div></section><section class="tsec" id="theme-rose-quartz" data-mode="light" data-suite="pro" data-nav="sidebar">
+<div class="thead"><h2>61–65 · Rose Quartz</h2><span class="nb sidebar">Left menu</span><span class="mode">light</span><span class="tag">Blush-pink light UI, soft and modern</span><span class="swatches"><i style="background:#fdf3f6"></i><i style="background:#ffffff"></i><i style="background:#db2777"></i><i style="background:#9333ea"></i><i style="background:#472b3f"></i></span></div>
 <div class="tgrid"><a class="dcard" href="61-rose-quartz-flow-composer.html">
 <div class="dnum">DESIGN 61</div>
 <div class="dname">Flow Composer</div>
@@ -327,8 +370,8 @@ h1 em{font-style:normal;background:linear-gradient(90deg,#22d3ee,#a78bfa,#f472b6
 <div class="dnum">DESIGN 65</div>
 <div class="dname">Admin · Audit</div>
 <div class="ddesc">RBAC matrix, secrets vault, immutable audit trail.</div>
-<div class="open">Open design →</div></a></div></section><section class="tsec" data-mode="dark" data-suite="pro">
-<div class="thead"><h2>66–70 · Deep Ocean</h2><span class="mode">dark</span><span class="tag">Fintech-grade navy with sky-blue data accents</span><span class="swatches"><i style="background:#082032"></i><i style="background:#0d2c44"></i><i style="background:#38bdf8"></i><i style="background:#7dd3fc"></i><i style="background:#e3f2fd"></i></span></div>
+<div class="open">Open design →</div></a></div></section><section class="tsec" id="theme-deep-ocean" data-mode="dark" data-suite="pro" data-nav="sidebar">
+<div class="thead"><h2>66–70 · Deep Ocean</h2><span class="nb sidebar">Left menu</span><span class="mode">dark</span><span class="tag">Fintech-grade navy with sky-blue data accents</span><span class="swatches"><i style="background:#082032"></i><i style="background:#0d2c44"></i><i style="background:#38bdf8"></i><i style="background:#7dd3fc"></i><i style="background:#e3f2fd"></i></span></div>
 <div class="tgrid"><a class="dcard" href="66-deep-ocean-flow-composer.html">
 <div class="dnum">DESIGN 66</div>
 <div class="dname">Flow Composer</div>
@@ -349,8 +392,8 @@ h1 em{font-style:normal;background:linear-gradient(90deg,#22d3ee,#a78bfa,#f472b6
 <div class="dnum">DESIGN 70</div>
 <div class="dname">Admin · Audit</div>
 <div class="ddesc">RBAC matrix, secrets vault, immutable audit trail.</div>
-<div class="open">Open design →</div></a></div></section><section class="tsec" data-mode="dark" data-suite="pro">
-<div class="thead"><h2>71–75 · Carbon Fiber</h2><span class="mode">dark</span><span class="tag">Industrial graphite, uppercase heads, steel blue</span><span class="swatches"><i style="background:#141618"></i><i style="background:#1b1e21"></i><i style="background:#60a5fa"></i><i style="background:#94a3b8"></i><i style="background:#e5eaee"></i></span></div>
+<div class="open">Open design →</div></a></div></section><section class="tsec" id="theme-carbon-fiber" data-mode="dark" data-suite="pro" data-nav="sidebar">
+<div class="thead"><h2>71–75 · Carbon Fiber</h2><span class="nb sidebar">Left menu</span><span class="mode">dark</span><span class="tag">Industrial graphite, uppercase heads, steel blue</span><span class="swatches"><i style="background:#141618"></i><i style="background:#1b1e21"></i><i style="background:#60a5fa"></i><i style="background:#94a3b8"></i><i style="background:#e5eaee"></i></span></div>
 <div class="tgrid"><a class="dcard" href="71-carbon-fiber-flow-composer.html">
 <div class="dnum">DESIGN 71</div>
 <div class="dname">Flow Composer</div>
@@ -371,8 +414,8 @@ h1 em{font-style:normal;background:linear-gradient(90deg,#22d3ee,#a78bfa,#f472b6
 <div class="dnum">DESIGN 75</div>
 <div class="dname">Admin · Audit</div>
 <div class="ddesc">RBAC matrix, secrets vault, immutable audit trail.</div>
-<div class="open">Open design →</div></a></div></section><section class="tsec" data-mode="light" data-suite="pro">
-<div class="thead"><h2>76–80 · Matcha Studio</h2><span class="mode">light</span><span class="tag">Calm cream-and-green editorial workspace</span><span class="swatches"><i style="background:#f6f7f0"></i><i style="background:#ffffff"></i><i style="background:#4d7c0f"></i><i style="background:#15803d"></i><i style="background:#27321f"></i></span></div>
+<div class="open">Open design →</div></a></div></section><section class="tsec" id="theme-matcha-studio" data-mode="light" data-suite="pro" data-nav="top">
+<div class="thead"><h2>76–80 · Matcha Studio</h2><span class="nb top">Top menu</span><span class="mode">light</span><span class="tag">Calm cream-and-green editorial workspace</span><span class="swatches"><i style="background:#f6f7f0"></i><i style="background:#ffffff"></i><i style="background:#4d7c0f"></i><i style="background:#15803d"></i><i style="background:#27321f"></i></span></div>
 <div class="tgrid"><a class="dcard" href="76-matcha-studio-flow-composer.html">
 <div class="dnum">DESIGN 76</div>
 <div class="dname">Flow Composer</div>
@@ -393,8 +436,8 @@ h1 em{font-style:normal;background:linear-gradient(90deg,#22d3ee,#a78bfa,#f472b6
 <div class="dnum">DESIGN 80</div>
 <div class="dname">Admin · Audit</div>
 <div class="ddesc">RBAC matrix, secrets vault, immutable audit trail.</div>
-<div class="open">Open design →</div></a></div></section><section class="tsec" data-mode="dark" data-suite="pro">
-<div class="thead"><h2>81–85 · Ultraviolet</h2><span class="mode">dark</span><span class="tag">Cyberpunk black lit by electric purple/magenta</span><span class="swatches"><i style="background:#0a0714"></i><i style="background:#150f26"></i><i style="background:#8b5cf6"></i><i style="background:#d946ef"></i><i style="background:#ede9fe"></i></span></div>
+<div class="open">Open design →</div></a></div></section><section class="tsec" id="theme-ultraviolet" data-mode="dark" data-suite="pro" data-nav="rail">
+<div class="thead"><h2>81–85 · Ultraviolet</h2><span class="nb rail">Left icon rail</span><span class="mode">dark</span><span class="tag">Cyberpunk black lit by electric purple/magenta</span><span class="swatches"><i style="background:#0a0714"></i><i style="background:#150f26"></i><i style="background:#8b5cf6"></i><i style="background:#d946ef"></i><i style="background:#ede9fe"></i></span></div>
 <div class="tgrid"><a class="dcard" href="81-ultraviolet-flow-composer.html">
 <div class="dnum">DESIGN 81</div>
 <div class="dname">Flow Composer</div>
@@ -415,8 +458,8 @@ h1 em{font-style:normal;background:linear-gradient(90deg,#22d3ee,#a78bfa,#f472b6
 <div class="dnum">DESIGN 85</div>
 <div class="dname">Admin · Audit</div>
 <div class="ddesc">RBAC matrix, secrets vault, immutable audit trail.</div>
-<div class="open">Open design →</div></a></div></section><section class="tsec" data-mode="dark" data-suite="pro">
-<div class="thead"><h2>86–90 · Copper Canyon</h2><span class="mode">dark</span><span class="tag">Warm rust-dark with molten copper highlights</span><span class="swatches"><i style="background:#171009"></i><i style="background:#20160c"></i><i style="background:#e07a3f"></i><i style="background:#f2b366"></i><i style="background:#fbeadb"></i></span></div>
+<div class="open">Open design →</div></a></div></section><section class="tsec" id="theme-copper-canyon" data-mode="dark" data-suite="pro" data-nav="top">
+<div class="thead"><h2>86–90 · Copper Canyon</h2><span class="nb top">Top menu</span><span class="mode">dark</span><span class="tag">Warm rust-dark with molten copper highlights</span><span class="swatches"><i style="background:#171009"></i><i style="background:#20160c"></i><i style="background:#e07a3f"></i><i style="background:#f2b366"></i><i style="background:#fbeadb"></i></span></div>
 <div class="tgrid"><a class="dcard" href="86-copper-canyon-flow-composer.html">
 <div class="dnum">DESIGN 86</div>
 <div class="dname">Flow Composer</div>
@@ -437,8 +480,8 @@ h1 em{font-style:normal;background:linear-gradient(90deg,#22d3ee,#a78bfa,#f472b6
 <div class="dnum">DESIGN 90</div>
 <div class="dname">Admin · Audit</div>
 <div class="ddesc">RBAC matrix, secrets vault, immutable audit trail.</div>
-<div class="open">Open design →</div></a></div></section><section class="tsec" data-mode="light" data-suite="pro">
-<div class="thead"><h2>91–95 · Porcelain Blue</h2><span class="mode">light</span><span class="tag">Data-dense trading-desk light UI, royal blue</span><span class="swatches"><i style="background:#f7f9fc"></i><i style="background:#ffffff"></i><i style="background:#1d4ed8"></i><i style="background:#0e7490"></i><i style="background:#0f2440"></i></span></div>
+<div class="open">Open design →</div></a></div></section><section class="tsec" id="theme-porcelain-blue" data-mode="light" data-suite="pro" data-nav="top">
+<div class="thead"><h2>91–95 · Porcelain Blue</h2><span class="nb top">Top menu</span><span class="mode">light</span><span class="tag">Data-dense trading-desk light UI, royal blue</span><span class="swatches"><i style="background:#f7f9fc"></i><i style="background:#ffffff"></i><i style="background:#1d4ed8"></i><i style="background:#0e7490"></i><i style="background:#0f2440"></i></span></div>
 <div class="tgrid"><a class="dcard" href="91-porcelain-blue-flow-composer.html">
 <div class="dnum">DESIGN 91</div>
 <div class="dname">Flow Composer</div>
@@ -459,8 +502,8 @@ h1 em{font-style:normal;background:linear-gradient(90deg,#22d3ee,#a78bfa,#f472b6
 <div class="dnum">DESIGN 95</div>
 <div class="dname">Admin · Audit</div>
 <div class="ddesc">RBAC matrix, secrets vault, immutable audit trail.</div>
-<div class="open">Open design →</div></a></div></section><section class="tsec" data-mode="dark" data-suite="pro">
-<div class="thead"><h2>96–100 · Midnight Aurora</h2><span class="mode">dark</span><span class="tag">Deep arctic night under teal-mint aurora glow</span><span class="swatches"><i style="background:#06111a"></i><i style="background:#0b1c29"></i><i style="background:#2dd4bf"></i><i style="background:#a3e635"></i><i style="background:#dff7f2"></i></span></div>
+<div class="open">Open design →</div></a></div></section><section class="tsec" id="theme-midnight-aurora" data-mode="dark" data-suite="pro" data-nav="sidebar">
+<div class="thead"><h2>96–100 · Midnight Aurora</h2><span class="nb sidebar">Left menu</span><span class="mode">dark</span><span class="tag">Deep arctic night under teal-mint aurora glow</span><span class="swatches"><i style="background:#06111a"></i><i style="background:#0b1c29"></i><i style="background:#2dd4bf"></i><i style="background:#a3e635"></i><i style="background:#dff7f2"></i></span></div>
 <div class="tgrid"><a class="dcard" href="96-midnight-aurora-flow-composer.html">
 <div class="dnum">DESIGN 96</div>
 <div class="dname">Flow Composer</div>
@@ -488,7 +531,7 @@ document.querySelectorAll('.fc').forEach(function(b){b.addEventListener('click',
 document.querySelectorAll('.fc').forEach(function(x){x.classList.remove('on')});b.classList.add('on');
 var f=b.dataset.f;
 document.querySelectorAll('.tsec').forEach(function(s){
-var show=f==='all'||s.dataset.mode===f||(f==='suite-core'&&s.dataset.suite==='core')||(f==='suite-pro'&&s.dataset.suite==='pro');
+var show=f==='all'||s.dataset.mode===f||(f==='suite-core'&&s.dataset.suite==='core')||(f==='suite-pro'&&s.dataset.suite==='pro')||(f==='nav-left'&&(s.dataset.nav==='sidebar'||s.dataset.nav==='rail'))||(f==='nav-top'&&s.dataset.nav==='top');
 s.style.display=show?'':'none';});});});
 </script>
 </body></html>
